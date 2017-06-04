@@ -34,7 +34,8 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+#post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -63,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: spfk
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -73,3 +74,24 @@ deploy:
   repo: git@github.com:odboy/odboy.github.io.git
   branch: master
 #  messages: 
+
+
+# yilia主题中“所有文章”功能需要
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
