@@ -145,6 +145,166 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python-argparse模块详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/Python-argparse模块详解/">Python argparse模块详解</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/Python-argparse模块详解/" class="archive-article-date">
+  	<time datetime="2017-06-08T02:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>   argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。<br>   官方文档中讲到的，本文基本都提到了，但只是简要记录，如果需要深入理解，可查看原文。<br>   <a href="https://docs.python.org/3/library/argparse.html" target="_blank" rel="external">https://docs.python.org/3/library/argparse.html</a></p>
+</blockquote>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import argparse                     # 导入模板</div><div class="line"></div><div class="line">parser = argparse.ArgumentParser()  # 创建parser</div><div class="line"></div><div class="line">parser.add_argument()               # 添加参数</div><div class="line"></div><div class="line">args = parser.parse_args()          # 参数解析</div></pre></td></tr></table></figure>
+<h2 id="ArgumentParser对象"><a href="#ArgumentParser对象" class="headerlink" title="ArgumentParser对象"></a><a href="https://docs.python.org/3/library/argparse.html#argumentparser-objects" target="_blank" rel="external">ArgumentParser对象</a></h2><pre><code>class argparse.ArgumentParser(
+    prog=None,                  # 设定程序名称 (defaul: sys.argv[0])
+    usage=None,                 # 替换默认的Usage信息
+    description=None,           # 程序简要信息说明(参数说明前)
+    epilog=None,                # 附加信息说明(参数说明后)
+    parents=[],                 # 继承父解析器(parser)
+    formatter_class=argparse.HelpFormatter,     # 自定义帮忙信息显示格式(4种)
+    prefix_chars=&apos;-&apos;,           # 参数前缀符号(默认为-,如：-h/--help)
+    fromfile_prefix_chars=None, # 从文件中引用参数（与在命令行直接写作用一致，解决参数过多的情况）
+    argument_default=None,      # 可设置argparse.SUPPRESS阻止默认参数默认值
+    conflict_handler=&apos;error&apos;,   # 参数冲突处理
+    add_help=True,              # 帮助信息中默认添加&quot;-h, --help&quot;描述
+    allow_abbrev=True           # 允许参数缩写
+)
+</code></pre><h2 id="add-argument-方法"><a href="#add-argument-方法" class="headerlink" title="add_argument()方法"></a><a href="https://docs.python.org/3/library/argparse.html#the-add-argument-method" target="_blank" rel="external">add_argument()方法</a></h2><pre><code>ArgumentParser.add_argument(
+    name or flags...    # 选项的名称或列表,例如：foo/-f/--foo
+    [, action]      # 采取的基本操作
+                        store(默认)         存储参数值
+                        store_const        使用该字符串选项时，取用const值
+                        store_true         使用该字符串选项时，参数值置为True
+                        store_false        使用该字符串选项时，参数值置为False
+                        append             同一个命令行中多次使用该字符串选项时，以追加的方式将值添加到list中
+                        append_const       将多个字符串选项的const值合并到一个list
+                        count              统计选项出现的次数 （如：&quot;-vvv&quot;,则最终值为3）
+                        help               parser默认会添加一个help action。(一般不用理会)
+                        version            打印版本信息
+                        也可以自定义action类
+    [, nargs]       # 该参数值要求的数量
+                        数值       指明参数个数
+                        ?         提供了参数则取参数值；
+                                    无参数但声明了选项字符串则取const值；
+                                    无参数也未声明选择字符串则取default值
+                        *         所有参数存入list
+                        +         与*类似，但参数个数不能为空
+                        argparse.REMAINDER  原封不动的记录参数到list中，通常用于将这些参数传递到其它的命令行工具。
+    [, const]       # action/nargs部分要求的常值
+                        1、当action=&quot;store_const&quot;或者&quot;append_const&quot;时需要设置
+                        2、当选项为(-f/--foo),nargs=&apos;?&apos;，同时未提供具体参数时，取用该值。
+    [, default]     # 参数默认值
+    [, type]        # 参数类型（内建参数或者函数，也可是自定义函数）
+    [, choices]     # 允许的参数值（白名单）,tuple/range
+    [, required]    # 选项是否必须，设置为True表示选项必填。
+    [, help]        # 参数说明,可以用其它类似 %(prog)s 格式调用prog值；可设置argparse.SUPPRESS使该选项在帮助信息中不可见。
+    [, metavar]     # 定义参数在Usage信息中的名称
+    [, dest]        # 解析后的属性名称
+)
+</code></pre><ul>
+<li><h3 id="自定义action"><a href="#自定义action" class="headerlink" title="自定义action"></a><a href="https://docs.python.org/3/library/argparse.html#action-classes" target="_blank" rel="external">自定义action</a></h3><p>  class argparse.<strong>Action</strong>(option_strings, dest, nargs=None, const=None, default=None, type=None, choices=None, required=False, help=None, metavar=None)</p>
+</li>
+</ul>
+<h2 id="parse-args-方法"><a href="#parse-args-方法" class="headerlink" title="parse_args()方法"></a><a href="https://docs.python.org/3/library/argparse.html#the-parse-args-method" target="_blank" rel="external">parse_args()方法</a></h2><pre><code>ArgumentParser.parse_args(args=None, namespace=None)
+</code></pre><p>一般情况下，我们直接使用如下命令就可以了：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># args=None, 程序将sys.argv作为参数代入</span></div><div class="line">args = parse.parse_args()              </div><div class="line"></div><div class="line"><span class="comment"># 给args赋值，跳过sys.argv，主要用于测试工作，避免每次运行都输入冗长的参数。</span></div><div class="line">args = parser.parse_args([<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>])</div><div class="line"></div><div class="line"><span class="comment"># namespace=custom_class，将属性分配到一个已经存在的对象中。</span></div><div class="line">parser.parse_args(args=[<span class="string">'--foo'</span>, <span class="string">'BAR'</span>], namespace=custom_class99)</div></pre></td></tr></table></figure></p>
+<h2 id="其它工具"><a href="#其它工具" class="headerlink" title="其它工具"></a><a href="https://docs.python.org/3/library/argparse.html#other-utilities" target="_blank" rel="external">其它工具</a></h2><ul>
+<li><h3 id="子命令"><a href="#子命令" class="headerlink" title="子命令"></a><a href="https://docs.python.org/3/library/argparse.html#sub-commands" target="_blank" rel="external">子命令</a></h3><p>  很多程序把它的功能分到几个子程序中，比如：pip install , pip download , pip uninstall 等. 通过这种方式，可以很方便处理不同程序的参数。</p>
+<p>  ArgumentParser.<strong>add_subparsers</strong>([title][, description][, prog][, parser_class][, action][, option_string][, dest][, help][, metavar])</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>subparsers = parser.add_subparsers(dest=<span class="string">'subparser_name'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>subparser1 = subparsers.add_parser(<span class="string">'1'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>subparser1.add_argument(<span class="string">'-x'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>subparser2 = subparsers.add_parser(<span class="string">'2'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>subparser2.add_argument(<span class="string">'y'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_args([<span class="string">'2'</span>, <span class="string">'frobble'</span>])</div><div class="line">Namespace(subparser_name=<span class="string">'2'</span>, y=<span class="string">'frobble'</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="文件类型对象"><a href="#文件类型对象" class="headerlink" title="文件类型对象"></a><a href="https://docs.python.org/3/library/argparse.html#filetype-objects" target="_blank" rel="external">文件类型对象</a></h3><p>  add_argument()中的FileType的参数”工厂”。</p>
+<p>  class argparse.<strong>FileType</strong>(mode=’r’, bufsize=-1, encoding=None, errors=None)</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'--raw'</span>, type=argparse.FileType(<span class="string">'wb'</span>, <span class="number">0</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'out'</span>, type=argparse.FileType(<span class="string">'w'</span>, encoding=<span class="string">'UTF-8'</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_args([<span class="string">'--raw'</span>, <span class="string">'raw.dat'</span>, <span class="string">'file.txt'</span>])</div><div class="line">Namespace(out=&lt;_io.TextIOWrapper name=<span class="string">'file.txt'</span> mode=<span class="string">'w'</span> encoding=<span class="string">'UTF-8'</span>&gt;, raw=&lt;_io.FileIO name=<span class="string">'raw.dat'</span> mode=<span class="string">'wb'</span>&gt;)</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="参数分组"><a href="#参数分组" class="headerlink" title="参数分组"></a><a href="https://docs.python.org/3/library/argparse.html#argument-groups" target="_blank" rel="external">参数分组</a></h3><p>  在Usage信息中的参数分组，如pip -h可以看到”Commands”,”General Options”分组。</p>
+<p>  ArgumentParser.<strong>add_argument_group</strong>(title=None, description=None)</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser(prog=<span class="string">'testPROG'</span>, add_help=<span class="keyword">False</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group1 = parser.add_argument_group(<span class="string">'group1'</span>, <span class="string">'group1 description'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group1.add_argument(<span class="string">'foo'</span>, help=<span class="string">'foo help'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group2 = parser.add_argument_group(<span class="string">'group2'</span>, <span class="string">'group2 description'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group2.add_argument(<span class="string">'--bar'</span>, help=<span class="string">'bar help'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.print_help()</div><div class="line"></div><div class="line">usage: testPROG [--bar BAR] foo</div><div class="line"></div><div class="line">group1:</div><div class="line">group1 description</div><div class="line"></div><div class="line">foo    foo help</div><div class="line"></div><div class="line">group2:</div><div class="line">group2 description</div><div class="line"></div><div class="line">--bar BAR  bar help</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a><a href="https://docs.python.org/3/library/argparse.html#mutual-exclusion" target="_blank" rel="external">互斥</a></h3><p>  参数互斥！</p>
+<p>  ArgumentParser.<strong>add_mutually_exclusive_group</strong>(required=False)</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser(prog=<span class="string">'PROG'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group = parser.add_mutually_exclusive_group(required=<span class="keyword">True</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group.add_argument(<span class="string">'--foo'</span>, action=<span class="string">'store_true'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>group.add_argument(<span class="string">'--bar'</span>, action=<span class="string">'store_false'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_args([])</div><div class="line">usage: PROG [-h] (--foo | --bar)</div><div class="line">PROG: error: one of the arguments --foo --bar <span class="keyword">is</span> required</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="解析器默认配置"><a href="#解析器默认配置" class="headerlink" title="解析器默认配置"></a><a href="https://docs.python.org/3/library/argparse.html#parser-defaults" target="_blank" rel="external">解析器默认配置</a></h3><p>  在解析器级别给参数设置默认值(优先级高于在add_argument方法中的设置)，也可以获取默认值。</p>
+<p>  ArgumentParser.<strong>set_defaults</strong>(**kwargs)       # 设置默认值</p>
+<p>  ArgumentParser.<strong>get_default</strong>(dest)            # 获取默认值</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'foo'</span>, type=int)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.set_defaults(bar=<span class="number">42</span>, baz=<span class="string">'badger'</span>)   <span class="comment"># 不审查是否在命令行中声明，故而bar，baz可以直接添加</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_args([<span class="string">'736'</span>])</div><div class="line">Namespace(bar=<span class="number">42</span>, baz=<span class="string">'badger'</span>, foo=<span class="number">736</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'--foo'</span>, default=<span class="string">'bar'</span>) <span class="comment"># 解析器级别默认值总是覆盖参数级别默认值</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.set_defaults(foo=<span class="string">'spam'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_args([])</div><div class="line">Namespace(foo=<span class="string">'spam'</span>)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'--foo'</span>, default=<span class="string">'badger'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.get_default(<span class="string">'foo'</span>)                   <span class="comment"># 获取默认值</span></div><div class="line"><span class="string">'badger'</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="打印帮忙"><a href="#打印帮忙" class="headerlink" title="打印帮忙"></a><a href="https://docs.python.org/3/library/argparse.html#printing-help" target="_blank" rel="external">打印帮忙</a></h3><p>  用于打印帮助信息。</p>
+<p>  ArgumentParser.<strong>print_usage</strong>(file=None)</p>
+<p>  ArgumentParser.<strong>print_help</strong>(file=None)</p>
+<p>  ArgumentParser.<strong>format_usage</strong>()</p>
+<p>  ArgumentParser.<strong>format_help</strong>()</p>
+</li>
+<li><h3 id="部分解析"><a href="#部分解析" class="headerlink" title="部分解析"></a><a href="https://docs.python.org/3/library/argparse.html#partial-parsing" target="_blank" rel="external">部分解析</a></h3><p>  有些脚本只解析部分参数，放过其余的参数以便传递给其它脚本或程序。 这种情况下使用 parse_known_args() 。跟parse_args()用法一样，但当参数过多的情况下并不会报错，而是将多余的参数放到一个新的tuple中。</p>
+<p>  ArgumentParser.<strong>parse_known_args</strong>(args=None, namespace=None)</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'--foo'</span>, action=<span class="string">'store_true'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'bar'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>parser.parse_known_args([<span class="string">'--foo'</span>, <span class="string">'--badger'</span>, <span class="string">'BAR'</span>, <span class="string">'spam'</span>])</div><div class="line">(Namespace(bar=<span class="string">'BAR'</span>, foo=<span class="keyword">True</span>), [<span class="string">'--badger'</span>, <span class="string">'spam'</span>])     <span class="comment"># ['--badger', 'spam']即为多余的参数。</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="自定义文件解析"><a href="#自定义文件解析" class="headerlink" title="自定义文件解析"></a><a href="https://docs.python.org/3/library/argparse.html#customizing-file-parsing" target="_blank" rel="external">自定义文件解析</a></h3></li>
+<li><h3 id="退出方法"><a href="#退出方法" class="headerlink" title="退出方法"></a><a href="https://docs.python.org/3/library/argparse.html#exiting-methods" target="_blank" rel="external">退出方法</a></h3></li>
+<li><h3 id="optparse代码升级"><a href="#optparse代码升级" class="headerlink" title="optparse代码升级"></a><a href="https://docs.python.org/3/library/argparse.html#upgrading-optparse-code" target="_blank" rel="external">optparse代码升级</a></h3><p>  原本argparse是与optparse保持兼容的，但是！@#￥%……&amp;*（。升级办法如下：</p>
+</li>
+</ul>
+<ol>
+<li>Replace all optparse.OptionParser.add_option() calls with ArgumentParser.add_argument() calls.</li>
+<li>Replace (options, args) = parser.parse_args() with args = parser.parse_args() and add additional ArgumentParser.add_argument() calls for the positional arguments. Keep in mind that what was previously called options, now in argparse context is called args.</li>
+<li>Replace callback actions and the callback_* keyword arguments with type or action arguments.</li>
+<li>Replace string names for type keyword arguments with the corresponding type objects (e.g. int, float, complex, etc).</li>
+<li>Replace optparse.Values with Namespace and optparse.OptionError and optparse.OptionValueError with ArgumentError.</li>
+<li>Replace strings with implicit arguments such as %default or %prog with the standard Python syntax to use dictionaries to format strings, that is, %(default)s and %(prog)s.</li>
+<li>Replace the OptionParser constructor version argument with a call to parser.add_argument(‘–version’, action=’version’, version=’<the version="">‘).</the></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/Python-argparse模块详解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-弱口令检测工具fenghuangscanner的安装与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -355,7 +515,7 @@
 <p>Get Start: <a href="http://www.pandoc.org/getting-started.html" target="_blank" rel="external">http://www.pandoc.org/getting-started.html</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install pandoc     <span class="comment"># 简单到爆</span></div><div class="line">pandoc --verison        <span class="comment"># 查看版本</span></div></pre></td></tr></table></figure>
 <h2 id="转换文件"><a href="#转换文件" class="headerlink" title="转换文件"></a>转换文件</h2><p>Demos : <a href="http://www.pandoc.org/demos.html" target="_blank" rel="external">http://www.pandoc.org/demos.html</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">pandoc test.md <span class="_">-f</span> markdown -t html <span class="_">-s</span> -o test.html</div><div class="line"><span class="comment"># 将Markdown格式的test.md文件转换成独立的html文件输出到test.html.</span></div><div class="line"></div><div class="line">pandoc <span class="_">-s</span> -S MANUAL.txt -o example29.docx</div><div class="line"></div><div class="line">pandoc <span class="built_in">source</span>/_posts/Pandoc<span class="_">-a</span>-universal-document-converter.md -o ~/TempDocs/pandoc.docx</div></pre></td></tr></table></figure></p>
-<p><img src="/Users/jason/TempDocs/123.jpg" alt="本地图片"><br><img src="https://images.apple.com/v/home/df/images/promos/airpods_large.jpg" alt="远程图片"></p>
+<p><img src="../img/dreamcruise.jpg" alt="本地图片"><br><img src="https://images.apple.com/v/home/df/images/promos/airpods_large.jpg" alt="远程图片"></p>
 <p>实测，能进行转换，但貌似排版格式就变得有点难看了。  不知是否是因为使用了表格，而表格的转换导致布局混乱。</p>
 
       
@@ -645,6 +805,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

@@ -27,7 +27,7 @@ pandoc source/_posts/Pandoc-a-universal-document-converter.md -o ~/TempDocs/pand
 
 ```
 
-![本地图片](/Users/jason/TempDocs/123.jpg)
+![本地图片](../img/dreamcruise.jpg)
 ![远程图片](https://images.apple.com/v/home/df/images/promos/airpods_large.jpg)
 
 实测，能进行转换，但貌似排版格式就变得有点难看了。  不知是否是因为使用了表格，而表格的转换导致布局混乱。
