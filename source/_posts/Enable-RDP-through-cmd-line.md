@@ -15,7 +15,7 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v
 reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
 
 ```
-
+<!-- more -->
 ## RDP端口
 
 ```bash
@@ -48,7 +48,6 @@ tasklist  /svc | find "TermService"
 # 根据pid（1316）查询端口号
 netstat -ano | find "1316"
 ```
-
 
 
 ## 脚本(maybe dangerous)  <未实际使用，仅供参考>

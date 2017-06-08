@@ -8,7 +8,7 @@ http://www.91ri.org/8654.html
 ![功能架构图](http://my.csdn.net/uploads/201206/26/1340719324_9785.JPG)
 
 ### 四项基本功能
-
+<!-- more -->
 - 主机发现（Host Discovery）
 
 - 端口扫描（Port Scanning）

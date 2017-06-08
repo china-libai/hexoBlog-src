@@ -12,7 +12,7 @@ tags:
 开机按住command+R
 
 ### 2.使用csrutil命令
-
+<!-- more -->
 打开终端Terminal，键入csrutil可以显示该命令的使用方法
 ```bash
 ➜  ~ csrutil

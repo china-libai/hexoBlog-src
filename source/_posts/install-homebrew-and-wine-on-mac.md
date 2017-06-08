@@ -14,7 +14,7 @@ brew install wine
 # 会提示wine: XQuartz is required to install this formula.X11Requirement unsatisfied!
 # 按照提示信息到https://xquartz.macosforge.org下载xquartz或者直接运行：
 brew cask install xquartz
-
+<!-- more -->
 # 安装成功后，再次：
 brew install wine
 

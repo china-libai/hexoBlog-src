@@ -3,8 +3,8 @@ title: 弱口令检测工具fenghuangscanner的安装与使用
 date: 2017-05-16 21:38:53
 tags:
 ---
-### 下载地址 : [https://github.com/wilson9x1/fenghuangscanner](https://github.com/wilson9x1/fenghuangscanner)
-
+下载地址 : [https://github.com/wilson9x1/fenghuangscanner](https://github.com/wilson9x1/fenghuangscanner)
+<!-- more -->
 ```bash
 cd fenghuangscanner
 pip install -r requirements.txt         # 安装依赖包

@@ -17,7 +17,7 @@ parser.add_argument()               # 添加参数
 
 args = parser.parse_args()          # 参数解析
 ```
-
+<!-- more -->
 ## [ArgumentParser对象](https://docs.python.org/3/library/argparse.html#argumentparser-objects)
     class argparse.ArgumentParser(
         prog=None,                  # 设定程序名称 (defaul: sys.argv[0])

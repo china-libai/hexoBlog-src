@@ -6,6 +6,9 @@ title: The begin of blog
 
 ## 搭建hexo静态博客
 Hexo官方文档 :: [https://hexo.io/zh-cn/docs](https://hexo.io/zh-cn/docs)
+
+<!-- more -->
+
 ### 安装
 
 ``` bash

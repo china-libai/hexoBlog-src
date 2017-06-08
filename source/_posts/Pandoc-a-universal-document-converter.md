@@ -15,6 +15,7 @@ Get Start: [http://www.pandoc.org/getting-started.html](http://www.pandoc.org/ge
 brew install pandoc     # 简单到爆
 pandoc --verison        # 查看版本
 ```
+<!-- more -->
 ## 转换文件
 Demos : [http://www.pandoc.org/demos.html](http://www.pandoc.org/demos.html)
 ```bash
