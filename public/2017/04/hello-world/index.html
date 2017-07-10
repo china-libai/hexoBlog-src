@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://oddboy.cn">
   <title>The begin of blog | Mr.Bingo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。 搭建hexo静态博客Hexo官方文档 :: https://hexo.io/zh-cn/docs 安装123456789101112$ wget -C https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg      # 下载Node.j">
+  <meta name="description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。  记录一个坑了自己很久的问题：每次hexo d部署之后，自定义域名都恢复到默认的情况，以至于每次部署后都需要在setting中重新配置自定义域名。 【解决办法】：在setting中进行的自定义域名，本质上在根目录下新建一CNAME文件，文件内容为自定义的域名。所以，可以在本地he">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The begin of blog">
 <meta property="og:url" content="http://oddboy.cn/2017/04/hello-world/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
-<meta property="og:description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。 搭建hexo静态博客Hexo官方文档 :: https://hexo.io/zh-cn/docs 安装123456789101112$ wget -C https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg      # 下载Node.j">
-<meta property="og:updated_time" content="2017-04-21T02:35:24.000Z">
+<meta property="og:description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。  记录一个坑了自己很久的问题：每次hexo d部署之后，自定义域名都恢复到默认的情况，以至于每次部署后都需要在setting中重新配置自定义域名。 【解决办法】：在setting中进行的自定义域名，本质上在根目录下新建一CNAME文件，文件内容为自定义的域名。所以，可以在本地he">
+<meta property="og:updated_time" content="2017-07-03T10:11:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The begin of blog">
-<meta name="twitter:description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。 搭建hexo静态博客Hexo官方文档 :: https://hexo.io/zh-cn/docs 安装123456789101112$ wget -C https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg      # 下载Node.j">
+<meta name="twitter:description" content="浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。这篇就算是一个开端，主要记录下hexo该如何使用。  记录一个坑了自己很久的问题：每次hexo d部署之后，自定义域名都恢复到默认的情况，以至于每次部署后都需要在setting中重新配置自定义域名。 【解决办法】：在setting中进行的自定义域名，本质上在根目录下新建一CNAME文件，文件内容为自定义的域名。所以，可以在本地he">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Bingo&#39;s Blog" type="application/atom+xml">
   
@@ -35,6 +35,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3a810c6a88015d34b8780f306ccb3365";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -85,6 +95,8 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
+		        
 					<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 		        
 			</div>
@@ -123,6 +135,8 @@
 						<a class="github" target="_blank" href="https://github.com/odboy" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 			        
@@ -169,7 +183,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。<br>这篇就算是一个开端，主要记录下hexo该如何使用。</p>
+<blockquote>
+<pre><code>记录一个坑了自己很久的问题：每次hexo d部署之后，自定义域名都恢复到默认的情况，以至于每次部署后都需要在setting中重新配置自定义域名。
+【解决办法】：在setting中进行的自定义域名，本质上在根目录下新建一CNAME文件，文件内容为自定义的域名。所以，可以在本地hexo目录的public文件夹下新建一个内容为自定义域名的文件名为“CNAME”的文件。 
+2017年06月09日 记
+</code></pre></blockquote>
 <h2 id="搭建hexo静态博客"><a href="#搭建hexo静态博客" class="headerlink" title="搭建hexo静态博客"></a>搭建hexo静态博客</h2><p>Hexo官方文档 :: <a href="https://hexo.io/zh-cn/docs" target="_blank" rel="external">https://hexo.io/zh-cn/docs</a></p>
+<a id="more"></a>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ wget -C https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg      <span class="comment"># 下载Node.js安装包</span></div><div class="line">$ open node-v6.10.2.pkg      <span class="comment"># 傻瓜式安装</span></div><div class="line">$ brew install git           <span class="comment"># 安装git</span></div><div class="line">$ npm install -g hexo-cli    <span class="comment"># 安全hexo</span></div><div class="line">$ hexo init &lt;folder&gt;         <span class="comment"># 从hexo官网下载初始化文件</span></div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;                </div><div class="line">$ npm install                <span class="comment"># 安装站点文件</span></div><div class="line"></div><div class="line">$ hexo server                <span class="comment"># 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"></div><div class="line">$ hexo new [layout] &lt;title&gt;  <span class="comment"># 新建一个post</span></div><div class="line">$ hexo generate              <span class="comment"># 生成静态文件</span></div></pre></td></tr></table></figure>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;    <span class="comment"># layout默认为 post，可以在 _config.yml 的 default_layout 参数指定。</span></div><div class="line">                               <span class="comment"># Hexo 有三种默认布局：post、page 和 draft。</span></div><div class="line"></div><div class="line">$ hexo new draft &lt;title0&gt;       <span class="comment"># 新建一份草稿</span></div><div class="line">$ hexo publish [layout] &lt;title0&gt;   <span class="comment"># 将draft移动到post</span></div><div class="line">$ hexo generate                 <span class="comment"># 生成静态文件</span></div></pre></td></tr></table></figure>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save      <span class="comment"># 安装hexo-deployer-git以实现git部署</span></div><div class="line"></div><div class="line">$ vim _config.yml</div><div class="line">--------------[file content]</div><div class="line">    deploy:</div><div class="line">      <span class="built_in">type</span>: git</div><div class="line">      repo: &lt;repository url&gt;    <span class="comment"># 库（Repository）地址</span></div><div class="line">      branch: [branch]          <span class="comment"># 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。</span></div><div class="line">      message: [message]        <span class="comment"># 自定义提交信息 (默认为 Site updated: &#123;&#123; now('YYYY-MM-DD HH:mm:ss') &#125;&#125;)</span></div><div class="line">--------------[file content]</div><div class="line">$ hexo deploy     <span class="comment"># 部署</span></div></pre></td></tr></table></figure>
@@ -181,7 +201,8 @@
 <h3 id="新建用于存放hexo博客源码的repo"><a href="#新建用于存放hexo博客源码的repo" class="headerlink" title="新建用于存放hexo博客源码的repo"></a>新建用于存放hexo博客源码的repo</h3><p>hexo deploy上传的只是生成的静态页面，博客的原始数据仍然存在于本地。为了安全起见，我们需要另外建一个库，用于博客源码。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git init    <span class="comment"># git本地目录初始化</span></div><div class="line">$ git remote add origin git@github.com:odboy/hexoB<span class="built_in">log</span>-src.git   <span class="comment"># 配置远程git库</span></div><div class="line">$ git add .   </div><div class="line">$ git commit -m <span class="string">"comment信息"</span></div><div class="line">$ git status      <span class="comment"># 查看分支情况</span></div><div class="line">$ git push -u origin master   <span class="comment"># 推送到master分支</span></div></pre></td></tr></table></figure>
 <h2 id="修改主题-–-spfk"><a href="#修改主题-–-spfk" class="headerlink" title="修改主题 – spfk"></a>修改主题 – <a href="http://luuman.github.io/2015/12/27/Hexo/HexoTheme/" target="_blank" rel="external">spfk</a></h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ cd ~/Documents/hexoBlog</div><div class="line">$ git clone https://github.com/luuman/hexo-theme-spfk.git themes/spfk</div><div class="line">$ cd themes/spfk</div><div class="line">$ git pull      # 主题update</div><div class="line">$ vim _config.yml</div><div class="line">--------------------</div><div class="line">      # Extensions</div><div class="line">      ## Plugins: https://hexo.io/plugins/</div><div class="line">      ## Themes: https://hexo.io/themes/</div><div class="line">      theme: spfk</div><div class="line">--------------------</div></pre></td></tr></table></figure>
-<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">图片辅助工具hexo-asset-image</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -374,6 +395,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
@@ -426,6 +451,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="http://blog.oddboy.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>逆着风忒帅</a>
+            </li>
+          
+            <li class="search-li">
               <a href="http://www.tass.com.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>江南天安</a>
             </li>
           
@@ -441,7 +470,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2016年环华骑行22800KM&lt;br&gt;&lt;br&gt;目前在猎户攻防实验室打杂&lt;br&gt;&lt;br&gt;还是一个魁拔迷</div>
   	  	
     	</section>
     

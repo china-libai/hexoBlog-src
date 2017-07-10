@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://oddboy.cn/2017/04/Enable-RDP-through-cmd-line/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
 <meta property="og:description" content="开启RDP通过命令行修改注册表。 123456# 开启RDPreg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fDenyTSConnections /t REG_DWORD /d 0 /f# 关闭RDPreg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentC">
-<meta property="og:updated_time" content="2017-04-26T11:22:48.000Z">
+<meta property="og:updated_time" content="2017-06-08T13:13:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Enable RDP through cmd line">
 <meta name="twitter:description" content="开启RDP通过命令行修改注册表。 123456# 开启RDPreg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fDenyTSConnections /t REG_DWORD /d 0 /f# 关闭RDPreg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentC">
@@ -35,6 +35,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3a810c6a88015d34b8780f306ccb3365";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -85,6 +95,8 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
+		        
 					<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 		        
 			</div>
@@ -123,6 +135,8 @@
 						<a class="github" target="_blank" href="https://github.com/odboy" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 			        
@@ -170,6 +184,7 @@
       
         <h2 id="开启RDP"><a href="#开启RDP" class="headerlink" title="开启RDP"></a>开启RDP</h2><p>通过命令行修改注册表。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 0 /f</div><div class="line"><span class="comment"># 关闭RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 1 /f</div><div class="line"><span class="comment"># 查询fDenyTSConnections值   0表示RDP开启    1表示RDP关闭</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="RDP端口"><a href="#RDP端口" class="headerlink" title="RDP端口"></a>RDP端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查询rdp端口号</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp"</span> /v PortNumber</div></pre></td></tr></table></figure>
 <h2 id="防火墙相关-Netsh-AdvFirewall-aspx"><a href="#防火墙相关-Netsh-AdvFirewall-aspx" class="headerlink" title="防火墙相关 Netsh AdvFirewall.aspx)"></a>防火墙相关 <a href="https://technet.microsoft.com/en-us/library/dd736198(v=ws.10" target="_blank" rel="external">Netsh AdvFirewall</a>.aspx)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 防火墙状态</span></div><div class="line">netsh advfirewall monitor show firewall</div><div class="line"></div><div class="line"><span class="comment"># 允许访问3389端口</span></div><div class="line">netsh advfirewall firewall add rule name=<span class="string">"Open Port 3389"</span> dir=<span class="keyword">in</span> action=allow protocol=TCP localport=3389</div><div class="line"></div><div class="line"><span class="comment"># 关闭防火墙</span></div><div class="line">netsh firewall <span class="built_in">set</span> opmode mode=<span class="built_in">disable</span></div></pre></td></tr></table></figure>
 <h2 id="开启远程协助"><a href="#开启远程协助" class="headerlink" title="开启远程协助"></a>开启远程协助</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fAllowToGetHelp /t REG_DWORD /d 1 /f</div></pre></td></tr></table></figure>
@@ -376,6 +391,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
@@ -428,6 +447,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="http://blog.oddboy.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>逆着风忒帅</a>
+            </li>
+          
+            <li class="search-li">
               <a href="http://www.tass.com.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>江南天安</a>
             </li>
           
@@ -443,7 +466,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2016年环华骑行22800KM&lt;br&gt;&lt;br&gt;目前在猎户攻防实验室打杂&lt;br&gt;&lt;br&gt;还是一个魁拔迷</div>
   	  	
     	</section>
     

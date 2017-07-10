@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://oddboy.cn/2017/06/Python-argparse模块详解/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
 <meta property="og:description" content="argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。   官方文档中讲到的，本文基本都提到了，但只是简要记录，如果需要深入理解，可查看原文。   https://docs.python.org/3/library/argparse.html  使用步骤1234567import argparse">
-<meta property="og:updated_time" content="2017-06-08T12:42:38.000Z">
+<meta property="og:updated_time" content="2017-06-08T13:15:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python argparse模块详解">
 <meta name="twitter:description" content="argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。   官方文档中讲到的，本文基本都提到了，但只是简要记录，如果需要深入理解，可查看原文。   https://docs.python.org/3/library/argparse.html  使用步骤1234567import argparse">
@@ -35,6 +35,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3a810c6a88015d34b8780f306ccb3365";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -85,6 +95,8 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
+		        
 					<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 		        
 			</div>
@@ -123,6 +135,8 @@
 						<a class="github" target="_blank" href="https://github.com/odboy" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 			        
@@ -172,6 +186,7 @@
 <p>   argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。<br>   官方文档中讲到的，本文基本都提到了，但只是简要记录，如果需要深入理解，可查看原文。<br>   <a href="https://docs.python.org/3/library/argparse.html" target="_blank" rel="external">https://docs.python.org/3/library/argparse.html</a></p>
 </blockquote>
 <h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import argparse                     # 导入模板</div><div class="line"></div><div class="line">parser = argparse.ArgumentParser()  # 创建parser</div><div class="line"></div><div class="line">parser.add_argument()               # 添加参数</div><div class="line"></div><div class="line">args = parser.parse_args()          # 参数解析</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="ArgumentParser对象"><a href="#ArgumentParser对象" class="headerlink" title="ArgumentParser对象"></a><a href="https://docs.python.org/3/library/argparse.html#argumentparser-objects" target="_blank" rel="external">ArgumentParser对象</a></h2><pre><code>class argparse.ArgumentParser(
     prog=None,                  # 设定程序名称 (defaul: sys.argv[0])
     usage=None,                 # 替换默认的Usage信息
@@ -363,6 +378,11 @@
     </a>
   
   
+    <a href="/2017/06/多线程爆破脚本-python3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多线程爆破脚本(python3)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
 </nav>
 
 
@@ -478,6 +498,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
@@ -530,6 +554,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="http://blog.oddboy.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>逆着风忒帅</a>
+            </li>
+          
+            <li class="search-li">
               <a href="http://www.tass.com.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>江南天安</a>
             </li>
           
@@ -545,7 +573,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2016年环华骑行22800KM&lt;br&gt;&lt;br&gt;目前在猎户攻防实验室打杂&lt;br&gt;&lt;br&gt;还是一个魁拔迷</div>
   	  	
     	</section>
     

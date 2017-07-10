@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://oddboy.cn/2017/05/install-homebrew-and-wine-on-mac/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
 <meta property="og:description" content="wine安装1234567891011121314151617# 安装homebrew/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 安装winebrew install wine# 会提示wine: XQuartz is required to">
-<meta property="og:updated_time" content="2017-05-16T06:02:50.000Z">
+<meta property="og:updated_time" content="2017-06-08T13:14:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="install homebrew and wine on mac">
 <meta name="twitter:description" content="wine安装1234567891011121314151617# 安装homebrew/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 安装winebrew install wine# 会提示wine: XQuartz is required to">
@@ -35,6 +35,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3a810c6a88015d34b8780f306ccb3365";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -85,6 +95,8 @@
 		        
 					<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
+		        
 					<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 		        
 			</div>
@@ -123,6 +135,8 @@
 						<a class="github" target="_blank" href="https://github.com/odboy" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/5017379844" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:ob@oddboy.cn" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="twitter" target="_blank" href="https://twitter.com/OddBoyCN" title="twitter"><i class="icon-twitter"></i></a>
 			        
@@ -168,7 +182,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="wine安装"><a href="#wine安装" class="headerlink" title="wine安装"></a>wine安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装homebrew</span></div><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div><div class="line"></div><div class="line"><span class="comment"># 安装wine</span></div><div class="line">brew install wine</div><div class="line"><span class="comment"># 会提示wine: XQuartz is required to install this formula.X11Requirement unsatisfied!</span></div><div class="line"><span class="comment"># 按照提示信息到https://xquartz.macosforge.org下载xquartz或者直接运行：</span></div><div class="line">brew cask install xquartz</div><div class="line"></div><div class="line"><span class="comment"># 安装成功后，再次：</span></div><div class="line">brew install wine</div><div class="line"></div><div class="line"><span class="comment"># 检查wine 安装状态</span></div><div class="line">wine --version</div><div class="line"></div><div class="line"><span class="comment"># 使用wine打开exe程序</span></div><div class="line">wine winfile.exe</div></pre></td></tr></table></figure>
+        <h2 id="wine安装"><a href="#wine安装" class="headerlink" title="wine安装"></a>wine安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装homebrew</span></div><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div><div class="line"></div><div class="line"><span class="comment"># 安装wine</span></div><div class="line">brew install wine</div><div class="line"><span class="comment"># 会提示wine: XQuartz is required to install this formula.X11Requirement unsatisfied!</span></div><div class="line"><span class="comment"># 按照提示信息到https://xquartz.macosforge.org下载xquartz或者直接运行：</span></div><div class="line">brew cask install xquartz</div><div class="line">&lt;!-- more --&gt;</div><div class="line"><span class="comment"># 安装成功后，再次：</span></div><div class="line">brew install wine</div><div class="line"></div><div class="line"><span class="comment"># 检查wine 安装状态</span></div><div class="line">wine --version</div><div class="line"></div><div class="line"><span class="comment"># 使用wine打开exe程序</span></div><div class="line">wine winfile.exe</div></pre></td></tr></table></figure>
 <p>brew cask :: <a href="http://caskroom.github.io" target="_blank" rel="external">http://caskroom.github.io</a></p>
 <p>XQuartz :: <a href="https://www.xquartz.org" target="_blank" rel="external">https://www.xquartz.org</a></p>
 
@@ -373,6 +387,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
@@ -425,6 +443,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
         <ul class="search-ul">
           
             <li class="search-li">
+              <a href="http://blog.oddboy.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>逆着风忒帅</a>
+            </li>
+          
+            <li class="search-li">
               <a href="http://www.tass.com.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>江南天安</a>
             </li>
           
@@ -440,7 +462,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2016年环华骑行22800KM&lt;br&gt;&lt;br&gt;目前在猎户攻防实验室打杂&lt;br&gt;&lt;br&gt;还是一个魁拔迷</div>
   	  	
     	</section>
     

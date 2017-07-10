@@ -4,6 +4,10 @@ title: The begin of blog
 浑浑噩噩这么多年，一直没能养成写博客的习惯。如今是时候开始积累自己。
 这篇就算是一个开端，主要记录下hexo该如何使用。
 
+>     记录一个坑了自己很久的问题：每次hexo d部署之后，自定义域名都恢复到默认的情况，以至于每次部署后都需要在setting中重新配置自定义域名。
+>     【解决办法】：在setting中进行的自定义域名，本质上在根目录下新建一CNAME文件，文件内容为自定义的域名。所以，可以在本地hexo目录的public文件夹下新建一个内容为自定义域名的文件名为“CNAME”的文件。 
+>     2017年06月09日 记
+
 ## 搭建hexo静态博客
 Hexo官方文档 :: [https://hexo.io/zh-cn/docs](https://hexo.io/zh-cn/docs)
 
@@ -101,3 +105,9 @@ $ vim _config.yml
 --------------------
 ```
 ### 插件配置
+
+[图片辅助工具hexo-asset-image](https://github.com/CodeFalling/hexo-asset-image)
+```
+npm install https://github.com/CodeFalling/hexo-asset-image --save 
+```
+
