@@ -159,6 +159,110 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Pandoc-a-universal-document-converter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/Pandoc-a-universal-document-converter/">Pandoc | a universal document converter</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/Pandoc-a-universal-document-converter/" class="archive-article-date">
+  	<time datetime="2017-05-02T02:02:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>近端时间开始使用Markdown写东西，欲罢不能。我打算在写报告的时候也使用MD，但是写好之后需要导出为其它格式(word/html/pdf等)，找了一堆MD软件，没有中意的。最后，发现这款转换工具，虽然这样用起来显得不智能，但属于开源项目，而且功能应该属于是强到炸天，故而入坑试试。</p>
+<p>官方主页: <a href="http://www.pandoc.org">http://www.pandoc.org</a></p>
+<p>Get Start: <a href="http://www.pandoc.org/getting-started.html">http://www.pandoc.org/getting-started.html</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install pandoc     <span class="comment"># 简单到爆</span></div><div class="line">pandoc --verison        <span class="comment"># 查看版本</span></div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/05/Pandoc-a-universal-document-converter/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/Pandoc-a-universal-document-converter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Enable-RDP-through-cmd-line" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/Enable-RDP-through-cmd-line/">Enable RDP through cmd line</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/Enable-RDP-through-cmd-line/" class="archive-article-date">
+  	<time datetime="2017-04-26T11:21:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="开启RDP"><a href="#开启RDP" class="headerlink" title="开启RDP"></a>开启RDP</h2><p>通过命令行修改注册表。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 0 /f</div><div class="line"><span class="comment"># 关闭RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 1 /f</div><div class="line"><span class="comment"># 查询fDenyTSConnections值   0表示RDP开启    1表示RDP关闭</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/Enable-RDP-through-cmd-line/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/Enable-RDP-through-cmd-line/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Mac-SIP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -376,7 +480,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ms17-010 exp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">接口安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ms17-010</a>
               </li>
             
             <div class="clearfix"></div>

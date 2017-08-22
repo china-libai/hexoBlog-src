@@ -5,7 +5,7 @@ tags: PHP
 ---
 >   打算使用phpBrew来进行PHP版本管理，然而phpBrew的使用需要在Ubuntu 16上默认安装的PHP版本为5，却无法直接apt-get install php5，所以打算基于php7尝试使用。
 >   结果很悲剧，疑似pkg-config出问题了。 所以本文主要做一个记录，祭奠浪费掉的两整天时间。最后憋屈的使用PHPstudy了。 /(ㄒoㄒ)/~~
-
+<!-- more -->
 ## PPA安装PHP
 ### - 安装PHP 5.6
 ```

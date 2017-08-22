@@ -159,6 +159,121 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ms17-010-python脚本exploit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/ms17-010-python脚本exploit/">ms17-010 python脚本exploit</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/ms17-010-python脚本exploit/" class="archive-article-date">
+  	<time datetime="2017-08-22T09:15:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>脚本github : <a href="https://github.com/worawit/MS17-010">https://github.com/worawit/MS17-010</a></p>
+        
+          <a class="article-more-a" href="/2017/08/ms17-010-python脚本exploit/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ms17-010</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/ms17-010-python脚本exploit/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-雷达巡航扫描系统-mac启动-终止脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/雷达巡航扫描系统-mac启动-终止脚本/">雷达巡航扫描系统--mac启动/终止脚本</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/雷达巡航扫描系统-mac启动-终止脚本/" class="archive-article-date">
+  	<time datetime="2017-08-03T02:56:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要涉及到使用<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/osascript.1.html">osascript</a>提权功能。</p>
+<p>另外,打算使用 trap “bash kill.sh;exit” EXIT INT TERM QUIT KILL来自动结束脚本所启动的后台服务，然后将启动脚本写入automantor中。</p>
+<p>但最后并没有使用，因为有些问题不太清楚，比如：在automator中结束时到底具体捕获哪一个信号？</p>
+<p>暂且这样使用，后续有需求，再处理。</p>
+<p>trap捕获信号 <a href="http://man.linuxde.net/trap">http://man.linuxde.net/trap</a><br>PS: bash下可用，zsh下疑似有问题。<br></p>
+        
+          <a class="article-more-a" href="/2017/08/雷达巡航扫描系统-mac启动-终止脚本/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/雷达巡航扫描系统-mac启动-终止脚本/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-PHP多版本安装与切换(Ubuntu-16-04-LTS)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -180,18 +295,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>  打算使用phpBrew来进行PHP版本管理，然而phpBrew的使用需要在Ubuntu 16上默认安装的PHP版本为5，却无法直接apt-get install php5，所以打算基于php7尝试使用。<br>  结果很悲剧，疑似pkg-config出问题了。 所以本文主要做一个记录，祭奠浪费掉的两整天时间。最后憋屈的使用PHPstudy了。 /(ㄒoㄒ)/~~</p>
-</blockquote>
-<h2 id="PPA安装PHP"><a href="#PPA安装PHP" class="headerlink" title="PPA安装PHP"></a>PPA安装PHP</h2><h3 id="安装PHP-5-6"><a href="#安装PHP-5-6" class="headerlink" title="- 安装PHP 5.6"></a>- 安装PHP 5.6</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install software-properties-common   # 安装PPA工具</div><div class="line">$ sudo add-apt-repository ppa:ondrej/php            # ondrej这个哥们维护在launchpad上的</div><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install -y php5.6</div></pre></td></tr></table></figure>
-<h3 id="安装PHP-7-1"><a href="#安装PHP-7-1" class="headerlink" title="- 安装PHP 7.1"></a>- 安装PHP 7.1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install python-software-properties</div><div class="line">$ sudo add-apt-repository ppa:ondrej/php</div><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install -y php7.1</div></pre></td></tr></table></figure>
-<h2 id="PHP版本切换"><a href="#PHP版本切换" class="headerlink" title="PHP版本切换"></a>PHP版本切换</h2><h3 id="PHP-5-6-gt-PHP-7-1"><a href="#PHP-5-6-gt-PHP-7-1" class="headerlink" title="PHP 5.6 =&gt; PHP 7.1"></a>PHP 5.6 =&gt; PHP 7.1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Apache:-</div><div class="line">$ sudo a2dismod php5.6</div><div class="line">$ sudo a2enmod php7.1</div><div class="line">$ sudo service apache2 restart</div><div class="line"></div><div class="line">CLI:-</div><div class="line">$ update-alternatives --set php /usr/bin/php7.1</div></pre></td></tr></table></figure>
-<h3 id="PHP-7-1-gt-PHP-5-6"><a href="#PHP-7-1-gt-PHP-5-6" class="headerlink" title="PHP 7.1 =&gt; PHP 5.6"></a>PHP 7.1 =&gt; PHP 5.6</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Apache:-</div><div class="line">$ sudo a2dismod php7.1</div><div class="line">$ sudo a2enmod php5.6</div><div class="line">$ sudo service apache2 restart</div><div class="line"></div><div class="line">CLI:-</div><div class="line">$ sudo update-alternatives --set php /usr/bin/php5.6</div></pre></td></tr></table></figure>
-<h2 id="使用phpBrew安装-切换PHP版本【失败】"><a href="#使用phpBrew安装-切换PHP版本【失败】" class="headerlink" title="使用phpBrew安装/切换PHP版本【失败】"></a>使用phpBrew安装/切换PHP版本【失败】</h2><p><a href="https://github.com/phpbrew/phpbrew" target="_blank" rel="external">https://github.com/phpbrew/phpbrew</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get update</div><div class="line">$ sudo apt-get install  php7.0 php7.0-cli php7.0-dev php7.0-curl php7.0-json php7.0-cgi php-pear autoconf automake curl build-essential openssl libssl-dev libcurl4-openssl-dev libxslt1-dev re2c libxml2 libxml2-dev bison libbz2-dev libreadline-dev libmhash2 libmhash-dev libmcrypt4 libmcrypt-dev</div><div class="line"></div><div class="line"># openssl成功安装的</div><div class="line">$ pkg-config --list-all | grep openssl</div><div class="line">openssl              OpenSSL - Secure Sockets Layer and cryptography libraries and tools</div><div class="line"></div><div class="line">$ phpbrew install 5.5.38    # 出错！！！！</div><div class="line">    checking for pkg-config... /usr/bin/pkg-config</div><div class="line">    configure: error: Cannot find OpenSSL&apos;s libraries</div><div class="line"></div><div class="line">----------------------</div><div class="line"></div><div class="line">$ phpbrew install 5.5.38 -- --with-openssl=/usr/bin/openssl</div><div class="line">    checking for pkg-config... /usr/bin/pkg-config</div><div class="line">    configure: error: Cannot find OpenSSL&apos;s &lt;evp.h&gt;</div><div class="line"></div><div class="line">$ phpbrew install 5.5.38 -- --with-openssl=/usr/bin/openssl --with-openssl-dir=/usr/include/openssl/</div><div class="line">    checking for pkg-config... /usr/bin/pkg-config</div><div class="line">    configure: error: Cannot find OpenSSL&apos;s &lt;evp.h&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>  各种无言以对，花了两整天时间，无法解决！</p>
-</blockquote>
-
+<p>  打算使用phpBrew来进行PHP版本管理，然而phpBrew的使用需要在Ubuntu 16上默认安装的PHP版本为5，却无法直接apt-get install php5，所以打算基于php7尝试使用。<br>  结果很悲剧，疑似pkg-config出问题了。 所以本文主要做一个记录，祭奠浪费掉的两整天时间。最后憋屈的使用PHPstudy了。 /(ㄒoㄒ)/~~<br></p></blockquote>
+        
+          <a class="article-more-a" href="/2017/07/PHP多版本安装与切换(Ubuntu-16-04-LTS)/#more">more >></a>
+        
       
 
       
@@ -644,110 +751,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Pandoc-a-universal-document-converter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/Pandoc-a-universal-document-converter/">Pandoc | a universal document converter</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/Pandoc-a-universal-document-converter/" class="archive-article-date">
-  	<time datetime="2017-05-02T02:02:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>近端时间开始使用Markdown写东西，欲罢不能。我打算在写报告的时候也使用MD，但是写好之后需要导出为其它格式(word/html/pdf等)，找了一堆MD软件，没有中意的。最后，发现这款转换工具，虽然这样用起来显得不智能，但属于开源项目，而且功能应该属于是强到炸天，故而入坑试试。</p>
-<p>官方主页: <a href="http://www.pandoc.org">http://www.pandoc.org</a></p>
-<p>Get Start: <a href="http://www.pandoc.org/getting-started.html">http://www.pandoc.org/getting-started.html</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install pandoc     <span class="comment"># 简单到爆</span></div><div class="line">pandoc --verison        <span class="comment"># 查看版本</span></div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/05/Pandoc-a-universal-document-converter/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/Pandoc-a-universal-document-converter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Enable-RDP-through-cmd-line" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/Enable-RDP-through-cmd-line/">Enable RDP through cmd line</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/Enable-RDP-through-cmd-line/" class="archive-article-date">
-  	<time datetime="2017-04-26T11:21:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="开启RDP"><a href="#开启RDP" class="headerlink" title="开启RDP"></a>开启RDP</h2><p>通过命令行修改注册表。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 0 /f</div><div class="line"><span class="comment"># 关闭RDP</span></div><div class="line">reg add <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections /t REG_DWORD /d 1 /f</div><div class="line"><span class="comment"># 查询fDenyTSConnections值   0表示RDP开启    1表示RDP关闭</span></div><div class="line">reg query <span class="string">"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"</span> /v fDenyTSConnections</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/Enable-RDP-through-cmd-line/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/Enable-RDP-through-cmd-line/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -856,7 +859,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ms17-010 exp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">接口安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ms17-010</a>
               </li>
             
             <div class="clearfix"></div>

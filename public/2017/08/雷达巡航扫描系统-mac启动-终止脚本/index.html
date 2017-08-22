@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://oddboy.cn">
-  <title>install homebrew and wine on mac | Mr.Bingo&#39;s Blog</title>
+  <title>雷达巡航扫描系统--mac启动/终止脚本 | Mr.Bingo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="wine安装1234567891011121314151617# 安装homebrew/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 安装winebrew install wine# 会提示wine: XQuartz is required to">
+  <meta name="description" content="主要涉及到使用osascript提权功能。 另外,打算使用 trap “bash kill.sh;exit” EXIT INT TERM QUIT KILL来自动结束脚本所启动的后台服务，然后将启动脚本写入automantor中。 但最后并没有使用，因为有些问题不太清楚，比如：在automator中结束时到底具体捕获哪一个信号？ 暂且这样使用，后续有需求，再处理。 trap捕获信号 http://">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="install homebrew and wine on mac">
-<meta property="og:url" content="http://oddboy.cn/2017/05/install-homebrew-and-wine-on-mac/index.html">
+<meta property="og:title" content="雷达巡航扫描系统--mac启动/终止脚本">
+<meta property="og:url" content="http://oddboy.cn/2017/08/雷达巡航扫描系统-mac启动-终止脚本/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
-<meta property="og:description" content="wine安装1234567891011121314151617# 安装homebrew/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 安装winebrew install wine# 会提示wine: XQuartz is required to">
-<meta property="og:updated_time" content="2017-06-08T13:14:38.000Z">
+<meta property="og:description" content="主要涉及到使用osascript提权功能。 另外,打算使用 trap “bash kill.sh;exit” EXIT INT TERM QUIT KILL来自动结束脚本所启动的后台服务，然后将启动脚本写入automantor中。 但最后并没有使用，因为有些问题不太清楚，比如：在automator中结束时到底具体捕获哪一个信号？ 暂且这样使用，后续有需求，再处理。 trap捕获信号 http://">
+<meta property="og:updated_time" content="2017-08-03T03:10:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="install homebrew and wine on mac">
-<meta name="twitter:description" content="wine安装1234567891011121314151617# 安装homebrew/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 安装winebrew install wine# 会提示wine: XQuartz is required to">
+<meta name="twitter:title" content="雷达巡航扫描系统--mac启动/终止脚本">
+<meta name="twitter:description" content="主要涉及到使用osascript提权功能。 另外,打算使用 trap “bash kill.sh;exit” EXIT INT TERM QUIT KILL来自动结束脚本所启动的后台服务，然后将启动脚本写入automantor中。 但最后并没有使用，因为有些问题不太清楚，比如：在automator中结束时到底具体捕获哪一个信号？ 暂且这样使用，后续有需求，再处理。 trap捕获信号 http://">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Bingo&#39;s Blog" type="application/atom+xml">
   
@@ -162,29 +162,34 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-install-homebrew-and-wine-on-mac" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-雷达巡航扫描系统-mac启动-终止脚本" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      install homebrew and wine on mac
+      雷达巡航扫描系统--mac启动/终止脚本
     </h1>
   
 
         
-        <a href="/2017/05/install-homebrew-and-wine-on-mac/" class="archive-article-date">
-  	<time datetime="2017-05-16T06:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+        <a href="/2017/08/雷达巡航扫描系统-mac启动-终止脚本/" class="archive-article-date">
+  	<time datetime="2017-08-03T02:56:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="wine安装"><a href="#wine安装" class="headerlink" title="wine安装"></a>wine安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装homebrew</span></div><div class="line">/usr/bin/ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div><div class="line"></div><div class="line"><span class="comment"># 安装wine</span></div><div class="line">brew install wine</div><div class="line"><span class="comment"># 会提示wine: XQuartz is required to install this formula.X11Requirement unsatisfied!</span></div><div class="line"><span class="comment"># 按照提示信息到https://xquartz.macosforge.org下载xquartz或者直接运行：</span></div><div class="line">brew cask install xquartz</div><div class="line">&lt;!-- more --&gt;</div><div class="line"><span class="comment"># 安装成功后，再次：</span></div><div class="line">brew install wine</div><div class="line"></div><div class="line"><span class="comment"># 检查wine 安装状态</span></div><div class="line">wine --version</div><div class="line"></div><div class="line"><span class="comment"># 使用wine打开exe程序</span></div><div class="line">wine winfile.exe</div></pre></td></tr></table></figure>
-<p>brew cask :: <a href="http://caskroom.github.io" target="_blank" rel="external">http://caskroom.github.io</a></p>
-<p>XQuartz :: <a href="https://www.xquartz.org" target="_blank" rel="external">https://www.xquartz.org</a></p>
+        <p>主要涉及到使用<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/osascript.1.html" target="_blank" rel="external">osascript</a>提权功能。</p>
+<p>另外,打算使用 trap “bash kill.sh;exit” EXIT INT TERM QUIT KILL来自动结束脚本所启动的后台服务，然后将启动脚本写入automantor中。</p>
+<p>但最后并没有使用，因为有些问题不太清楚，比如：在automator中结束时到底具体捕获哪一个信号？</p>
+<p>暂且这样使用，后续有需求，再处理。</p>
+<p>trap捕获信号 <a href="http://man.linuxde.net/trap" target="_blank" rel="external">http://man.linuxde.net/trap</a><br>PS: bash下可用，zsh下疑似有问题。<br><a id="more"></a></p>
+<h3 id="启动脚本"><a href="#启动脚本" class="headerlink" title="启动脚本"></a>启动脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="built_in">cd</span> /Users/jason/geekTools/radar</div><div class="line"><span class="keyword">if</span> [ $? <span class="_">-eq</span> 0 ]</div><div class="line"><span class="keyword">then</span></div><div class="line">    /usr/<span class="built_in">local</span>/bin/mongod --port 65521 --dbpath DBData --auth  &gt;&gt; <span class="built_in">log</span>/db.log  2&gt;&amp;1 &amp;</div><div class="line">    /usr/<span class="built_in">local</span>/bin/python Run.py &gt;&gt; <span class="built_in">log</span>/web.log 2&gt;&amp;1 &amp;</div><div class="line">	osascript <span class="_">-e</span> <span class="string">'do shell script "sudo -s /usr/local/bin/python aider/Aider.py &gt;&gt; log/aider.log 2&gt;&amp;1 &amp;" with administrator privileges'</span></div><div class="line">    /usr/<span class="built_in">local</span>/bin/python nascan/NAScan.py &gt;&gt; <span class="built_in">log</span>/nascan.log 2&gt;&amp;1 &amp;</div><div class="line">    /usr/<span class="built_in">local</span>/bin/python vulscan/VulScan.py &gt;&gt; <span class="built_in">log</span>/vulscan.log 2&gt;&amp;1 &amp;</div><div class="line">    <span class="built_in">echo</span> <span class="string">"Radar Started"</span>;</div><div class="line">    say <span class="string">"Radar Started"</span>;</div><div class="line">    <span class="comment">#trap "bash kill.sh;exit" EXIT INT TERM QUIT KILL</span></div><div class="line">    <span class="comment">#bash kill.sh;</span></div><div class="line">    <span class="comment"># while true; do </span></div><div class="line">    <span class="comment">#     sleep 86400;</span></div><div class="line">    <span class="comment"># done</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<h3 id="终止脚本"><a href="#终止脚本" class="headerlink" title="终止脚本"></a>终止脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">ps aux | grep <span class="string">'mongod --port 65521 --dbpath DBData --auth'</span> | grep -v <span class="string">'grep'</span>| awk -F <span class="string">' '</span> <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="built_in">kill</span>;</div><div class="line">ps aux | grep <span class="string">'Run.py'</span> | grep -v <span class="string">'grep'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="built_in">kill</span>;</div><div class="line"><span class="comment">#osascript -e 'do shell script "ps aux | grep \"aider/Aider.py\" | grep -v \"grep\" | awk \"&#123;print $2&#125;\" | xargs sudo -s kill" with administrator privileges'</span></div><div class="line"><span class="built_in">kill</span>Aider=<span class="string">"ps aux | grep 'aider/Aider.py' | grep -v 'grep' | awk '&#123;print \$2&#125;' | xargs sudo -s kill"</span>;</div><div class="line"><span class="built_in">kill</span>Aider=<span class="string">'do shell script "'</span><span class="variable">$killAider</span><span class="string">'" with administrator privileges'</span>;</div><div class="line">osascript <span class="_">-e</span> <span class="string">"<span class="variable">$killAider</span>"</span>;</div><div class="line"><span class="comment">#trap "osascript -e \"$killAider\"" EXIT INT TERM QUIT KILL;</span></div><div class="line">ps aux | grep <span class="string">'nascan/NAScan.py'</span> | grep -v <span class="string">'grep'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="built_in">kill</span>;</div><div class="line">ps aux | grep <span class="string">'vulscan/VulScan.py'</span> | grep -v <span class="string">'grep'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="built_in">kill</span>;</div><div class="line"><span class="built_in">echo</span> <span class="string">"Radar Terminated"</span>;</div><div class="line">say <span class="string">"Radar Terminated"</span>;</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
+<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>需要kill -9 xxx 才能结束某些进程。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  radar git:(master) ✗ ps aux | grep <span class="string">'mongod --port 65521 --dbpath DBData --auth'</span></div><div class="line">jason            17784   0.0  0.0  2452848   2004   ??  S    10:39AM   0:00.02 /bin/bash -c <span class="comment">#!/bin/sh\012cd /Users/jason/geekTools/radar\012if [ $? -eq 0 ]\012then\012    /usr/local/bin/mongod --port 65521 --dbpath DBData --auth  &gt;&gt; log/db.log  2&gt;&amp;1 &amp;\012    /usr/local/bin/python Run.py &gt;&gt; log/web.log 2&gt;&amp;1 &amp;\012\011osascript -e 'do shell script "sudo -s /usr/local/bin/python aider/Aider.py &gt;&gt; log/aider.log 2&gt;&amp;1 &amp;" with administrator privileges'\012    /usr/local/bin/python nascan/NAScan.py &gt;&gt; log/nascan.log 2&gt;&amp;1 &amp;\012    /usr/local/bin/python vulscan/VulScan.py &gt;&gt; log/vulscan.log 2&gt;&amp;1 &amp;\012    echo "Radar Started";\012    say "Radar Started";\012    trap "bash kill.sh;exit" EXIT INT TERM QUIT KILL\012    while true; do \012        sleep 86400;\012    done\012fi\012 -</span></div><div class="line">jason            18686   0.0  0.0  2433828   1924 s001  R+   10:47AM   0:00.00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn mongod --port 65521 --dbpath DBData --auth</div><div class="line">jason            18370   0.0  0.0  2435440   2240   ??  S    10:44AM   0:00.01 /bin/bash -c <span class="comment">#!/bin/sh\012cd /Users/jason/geekTools/radar\012if [ $? -eq 0 ]\012then\012    /usr/local/bin/mongod --port 65521 --dbpath DBData --auth  &gt;&gt; log/db.log  2&gt;&amp;1 &amp;\012    /usr/local/bin/python Run.py &gt;&gt; log/web.log 2&gt;&amp;1 &amp;\012\011osascript -e 'do shell script "sudo -s /usr/local/bin/python aider/Aider.py &gt;&gt; log/aider.log 2&gt;&amp;1 &amp;" with administrator privileges'\012    /usr/local/bin/python nascan/NAScan.py &gt;&gt; log/nascan.log 2&gt;&amp;1 &amp;\012    /usr/local/bin/python vulscan/VulScan.py &gt;&gt; log/vulscan.log 2&gt;&amp;1 &amp;\012    echo "Radar Started";\012    say "Radar Started";\012    trap "bash kill.sh;exit" EXIT INT TERM QUIT KILL\012    while true; do \012        sleep 86400;\012    done\012fi\012 -</span></div></pre></td></tr></table></figure></p>
 
       
 
@@ -243,7 +248,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://oddboy.cn/2017/05/install-homebrew-and-wine-on-mac/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://oddboy.cn/2017/08/雷达巡航扫描系统-mac启动-终止脚本/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -257,18 +262,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/05/Nmap-cheat-sheet/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/PHP多版本安装与切换(Ubuntu-16-04-LTS)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Nmap cheat sheet
+          PHP多版本安装与切换(Ubuntu-16-04-LTS)
         
       </div>
     </a>
   
   
-    <a href="/2017/05/弱口令检测工具fenghuangscanner的安装与使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">弱口令检测工具fenghuangscanner的安装与使用</div>
+    <a href="/2017/08/ms17-010-python脚本exploit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ms17-010 python脚本exploit</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -284,8 +289,8 @@ var _hmt = _hmt || [];
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://oddboy.cn/2017/05/install-homebrew-and-wine-on-mac/", 
-    sourceId: "install-homebrew-and-wine-on-mac",
+    url: "http://oddboy.cn/2017/08/雷达巡航扫描系统-mac启动-终止脚本/", 
+    sourceId: "雷达巡航扫描系统-mac启动-终止脚本",
     productKey: "a63c0577991f4763b067b160ea7ae0e2",
     target: "cloud-tie-wrapper"
   };
