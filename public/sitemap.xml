@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oddboy.cn/2017/08/XSS-%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</loc>
+    
+    <lastmod>2017-08-31T10:37:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://oddboy.cn/2017/08/ms17-010-python%E8%84%9A%E6%9C%ACexploit/</loc>
     
     <lastmod>2017-08-22T09:33:10.000Z</lastmod>
