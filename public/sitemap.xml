@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://oddboy.cn/2017/09/Tomcat%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-CVE-2017-12615-%E5%A4%8D%E7%8E%B0/</loc>
+    
+    <lastmod>2017-09-21T08:34:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://oddboy.cn/2017/09/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1JS%E8%84%9A%E6%9C%AC%E5%88%86%E6%9E%90-%E6%B5%81%E9%87%8F%E4%BC%AA%E9%80%A0%E8%84%9A%E6%9C%AC/</loc>
+    
+    <lastmod>2017-09-08T10:06:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://oddboy.cn/2017/08/XSS-%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</loc>
     
     <lastmod>2017-08-31T10:37:57.000Z</lastmod>
