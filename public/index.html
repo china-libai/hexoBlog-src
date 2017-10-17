@@ -159,6 +159,69 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/">Apache Solr XML外部实体扩展(XXE)及远程代码执行（RCE CVE-2017-12629）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/" class="archive-article-date">
+  	<time datetime="2017-10-17T06:55:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0x00-简述"><a href="#0x00-简述" class="headerlink" title="0x00 简述"></a>0x00 简述</h2><p>这里涉及到两个漏洞，一个是外部实体扩展XML External Entity Expansion (deftype=xmlparser) ，另一个是远程代码执行Remote Code Execution (add-listener: RunExecutableListener)。这两个漏洞是由Michael Stepankin (JPMorgan Chase)和Olga Barinova (Gotham Digital Science)发现并公布，此处主要进行漏洞复现。</p>
+<p>原文地址：<a href="http://lucene.472066.n3.nabble.com/Re-Several-critical-vulnerabilities-discovered-in-Apache-Solr-XXE-amp-RCE-td4358308.html">http://lucene.472066.n3.nabble.com/Re-Several-critical-vulnerabilities-discovered-in-Apache-Solr-XXE-amp-RCE-td4358308.html</a></p>
+<p>Solr主页：<a href="http://lucene.apache.org/solr/">http://lucene.apache.org/solr/</a></p>
+        
+          <a class="article-more-a" href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">漏洞复现</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Tomcat文件上传-CVE-2017-12615-复现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -196,7 +259,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">文件上传;tomcat</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件上传</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">tomcat</a>
         		</li>
       		
 		</ul>
@@ -728,70 +795,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Python-argparse模块详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/Python-argparse模块详解/">Python argparse模块详解</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/Python-argparse模块详解/" class="archive-article-date">
-  	<time datetime="2017-06-08T02:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>   argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。<br>   官方文档中讲到的，本文基本都提到了，但只是简要记录，如果需要深入理解，可查看原文。<br>   <a href="https://docs.python.org/3/library/argparse.html">https://docs.python.org/3/library/argparse.html</a></p>
-</blockquote>
-<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import argparse                     # 导入模板</div><div class="line"></div><div class="line">parser = argparse.ArgumentParser()  # 创建parser</div><div class="line"></div><div class="line">parser.add_argument()               # 添加参数</div><div class="line"></div><div class="line">args = parser.parse_args()          # 参数解析</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/06/Python-argparse模块详解/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/Python-argparse模块详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -892,11 +895,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+                <a href="javascript:void(0)" class="js-tag color5">漏洞复现</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">文件上传;tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -904,11 +907,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">接口安全</a>
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口安全</a>
               </li>
              
               <li class="article-tag-list-item">

