@@ -28,7 +28,6 @@ $ sudo apt-get install -y php7.1
 Apache:-
 $ sudo a2dismod php5.6
 $ sudo a2enmod php7.1
-$ sudo service apache2 restart
 
 CLI:-
 $ update-alternatives --set php /usr/bin/php7.1
